@@ -1,0 +1,33 @@
+.container {
+  color: rgb(0, 240, 223);
+  background: rgba(0, 12, 36, 1) 52%;
+}
+.banner {
+  height: 65vh;
+}
+.profilePhoto {
+  height: 20rem;
+  width: 20rem;
+}
+
+/* xs < 768 */
+@media screen and (max-width: 767px) {
+}
+
+/* sm */
+@media screen and (min-width: 768px) {
+  .container {
+  }
+}
+
+/* md */
+@media screen and (min-width: 941px) {
+  .container {
+  }
+}
+
+/* lg */
+@media screen and (min-width: 1200px) {
+  .container {
+  }
+}
