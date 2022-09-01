@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Intro.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import banner from "../../assets/Banner-web.webp";
-
+import ArrowDown from "./../Commons/ArrowDown/ArrowDown";
 const Intro = () => {
   return (
     <Container
@@ -10,9 +10,9 @@ const Intro = () => {
       className={`${styles.container} min-vh-100 d-flex flex-column `}
     >
       <Row className="p-0">
-        <img src={banner} className={`${styles.banner}`}></img>
+        <img src={banner} className={`${styles.banner} p-0`}></img>
       </Row>
-      <Row className="d-flex justify-content-around align-items-center mt-5 mb-5">
+      <Row className="d-flex justify-content-around align-items-center mt-5 mb-5 p-0">
         <Col className="d-flex justify-content-center">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDkubybETfGZg8E0_SH-SY3wF_TcjxnPIzoA&usqp=CAU"
@@ -36,6 +36,11 @@ const Intro = () => {
           del mundo, ya que el contexto de todo mercado, industria, etc.,
           siempre este ligado a hechos y situaciones económicas que el ser
           humano como ser social y racional va cambiando en su día a día.
+        </Col>
+      </Row>
+      <Row>
+        <Col className="d-flex justify-content-center mt-5">
+          <ArrowDown />
         </Col>
       </Row>
     </Container>

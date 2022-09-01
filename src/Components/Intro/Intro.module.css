@@ -1,13 +1,14 @@
 .container {
   color: rgb(0, 240, 223);
   background: rgba(0, 12, 36, 1) 52%;
+  font-family: "Montserrat", serif;
+  font-weight: bold;
 }
 .banner {
-  height: 65vh;
+  height: 45vh;
 }
 .profilePhoto {
-  height: 20rem;
-  width: 20rem;
+  height: 15rem;
 }
 
 /* xs < 768 */
