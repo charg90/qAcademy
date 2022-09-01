@@ -8,7 +8,6 @@ function App() {
     <>
       <Intro />
       <Cursos />
-      <Alumnos />
     </>
   );
 }
