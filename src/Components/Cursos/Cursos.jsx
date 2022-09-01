@@ -43,7 +43,7 @@ const Cursos = () => {
                     descripcion 2
                   </p>
                   <p className={` ${styles.textoDescripcion} `}>
-                    descripcion 3
+                    descripcion 3!
                   </p>
                 </div>
               </Col>
