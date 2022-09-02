@@ -1,0 +1,23 @@
+.container {
+  background-color: #000c24;
+  color: #00f0df;
+}
+
+.cardBody {
+  background-color: transparent;
+
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #00f0df,
+    0 0 0.8rem #00f0df, 0 0 2.8rem #00f0df, inset 0 0 1.3rem #00f0df;
+}
+
+.text {
+  color: #00f0df;
+}
+
+.titleText {
+  color: #00f0df;
+}
+.icon {
+  text-shadow: rgba(255, 0, 0, 0.9) 0px 0px 31px;
+}
