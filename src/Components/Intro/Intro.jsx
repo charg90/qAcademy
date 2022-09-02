@@ -39,7 +39,7 @@ const Intro = () => {
         </Col>
       </Row>
       <Row>
-        <Col className="d-flex justify-content-center mt-5">
+        <Col className="d-flex justify-content-center ">
           <ArrowDown />
         </Col>
       </Row>
