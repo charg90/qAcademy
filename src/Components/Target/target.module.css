@@ -1,0 +1,42 @@
+.container {
+  background: rgb(0, 12, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 12, 36, 1) 97%,
+    rgba(0, 240, 223, 1) 99%
+  );
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  color: #00f0df;
+}
+
+.logo {
+  height: 35rem;
+  width: 35rem;
+  border-radius: 50%;
+}
+
+.textos {
+  background: #00f0df;
+  color: #000c24;
+  padding: 0.5rem;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 0px 33px 9px rgba(0, 240, 224, 1);
+  -moz-box-shadow: 0px 0px 33px 9px rgba(0, 240, 224, 1);
+  box-shadow: 0px 0px 33px 9px rgba(0, 240, 224, 1);
+}
+
+.textoDescripcion {
+  color: #00f0df;
+  border-bottom: 2px solid #00f0df;
+}
+
+.titulo {
+  color: #00f0df;
+  position: relative;
+  bottom: 6.5rem;
+}
+
+.arrowDown {
+  color: #00f0df;
+}
