@@ -3,6 +3,7 @@ import { BsInstagram, BsYoutube } from "react-icons/bs";
 import { FaDiscord } from "react-icons/fa";
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "./footer.module.css";
+
 const Footer = () => {
   return (
     <Container fluid className={`${styles.container}   `}>

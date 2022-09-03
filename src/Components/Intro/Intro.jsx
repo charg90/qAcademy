@@ -13,13 +13,13 @@ const Intro = () => {
         <img src={banner} className={`${styles.banner} p-0`}></img>
       </Row>
       <Row className="d-flex justify-content-around align-items-center mt-5 mb-5 p-0">
-        <Col className="d-flex justify-content-center">
+        <Col xs={12} sm={12} lg={6} className="d-flex justify-content-center">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDkubybETfGZg8E0_SH-SY3wF_TcjxnPIzoA&usqp=CAU"
             className={`${styles.profilePhoto} justify-content-center align-items-center`}
           ></img>
         </Col>
-        <Col className="d-flex justify-content-center">
+        <Col xs={12} sm={12} lg={6} className="d-flex justify-content-center">
           Déjame comentarte un poco a que me dedico. Soy trader profesional ya
           hace varios años, me inicie en el mundo de la economía en el año 2015,
           operando primeramente en el mercado local. Al notar una atracción por
@@ -37,9 +37,7 @@ const Intro = () => {
           siempre este ligado a hechos y situaciones económicas que el ser
           humano como ser social y racional va cambiando en su día a día.
         </Col>
-      </Row>
-      <Row>
-        <Col className="d-flex justify-content-center ">
+        <Col sm={12} className="d-flex justify-content-center ">
           <ArrowDown />
         </Col>
       </Row>

@@ -13,15 +13,20 @@ const Cursos = () => {
         <h2>Par quien son nuestro cursos</h2>
 
         <Row className={`d-flex  w-100 `}>
-          <Col className="d-flex justify-content-center">
+          <Col xs={12} lg={6} className="d-flex justify-content-center">
             <img src={logo} className={`${styles.logo} img-fluid `} />
           </Col>
 
-          <Col className={`d-flex `}>
-            <Row className={`d-flex justify-content-center w-100`}>
-              <Col className={`text-center ${styles.texto}`}>
+          <Col xs={12} md={12} lg={6} className={`d-flex `}>
+            <Row className={`d-flex justify-content-center w-100 mt-md-5 mt-5`}>
+              <Col
+                xs={12}
+                md={12}
+                lg={6}
+                className={`text-center ${styles.texto} d-flex flex-column justify-content-center `}
+              >
                 <p className={` ${styles.textos}`}>Sin experiencia</p>
-                <div className="d-flex flex-column h-75 justify-content-around">
+                <div className="d-flex flex-column h-75 justify-content-around ">
                   <p className={` ${styles.textoDescripcion} `}>
                     descripcion 1
                   </p>
@@ -33,7 +38,12 @@ const Cursos = () => {
                   </p>
                 </div>
               </Col>
-              <Col className={`text-center`}>
+              <Col
+                xs={12}
+                md={12}
+                lg={6}
+                className={`text-center mt-sm-5 mt-md-0 d-flex flex-column justify-content-center mt-4 mt-md-0 `}
+              >
                 <p className={` ${styles.textos}`}>Con experiencia</p>
                 <div className="d-flex flex-column h-75 justify-content-around">
                   <p className={` ${styles.textoDescripcion} `}>
@@ -49,9 +59,17 @@ const Cursos = () => {
               </Col>
             </Row>
           </Col>
-          <h2 className={`text-end`}>Otra frase mas</h2>
+          <Row className="d-flex justify-content-end">
+            <Col xs={12} lg={6}>
+              <h2 className={`text-end mt-2 mt-md-5  p-0`}>Otra frase mas</h2>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} className="d-flex justify-content-center">
+              <ArrowDown />
+            </Col>
+          </Row>
         </Row>
-        <ArrowDown />
       </Container>
     </>
   );

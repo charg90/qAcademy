@@ -11,7 +11,6 @@ function App() {
       <Target />
       <Alumnos />
       <Cursos />
-
       <Footer />
     </>
   );
