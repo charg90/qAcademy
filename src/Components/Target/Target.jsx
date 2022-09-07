@@ -1,9 +1,41 @@
-import React from "react";
 import styles from "./target.module.css";
+//react components
 import { Container, Row, Col } from "react-bootstrap";
 import logo from "./../../assets/Qcapital.webp";
+//commmon components
 import ArrowDown from "../Commons/ArrowDown/ArrowDown";
+//Framer motion
+import { motion, useAnimation } from "framer-motion";
+// react interseption observer
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 const Cursos = () => {
+  // framer motion container  for make de stagger transition
+
+  const target = {
+    show: {
+      transition: {
+        staggerChildren: 0.35,
+      },
+    },
+  };
+  // framer motion items animation
+  const items = {
+    hidden: {
+      opacity: 0,
+      y: -200,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        duration: 1,
+        bounce: 0,
+      },
+    },
+  };
+
   return (
     <>
       <Container
@@ -26,17 +58,32 @@ const Cursos = () => {
                 className={`text-center ${styles.texto} d-flex flex-column justify-content-center `}
               >
                 <p className={` ${styles.textos}`}>Sin experiencia</p>
-                <div className="d-flex flex-column h-75 justify-content-around ">
-                  <p className={` ${styles.textoDescripcion} `}>
+                <motion.div
+                  className="d-flex flex-column h-75 justify-content-around "
+                  variants={target}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: false, amount: 1 }}
+                >
+                  <motion.p
+                    variants={items}
+                    className={` ${styles.textoDescripcion} `}
+                  >
                     descripcion 1
-                  </p>
-                  <p className={` ${styles.textoDescripcion} `}>
+                  </motion.p>
+                  <motion.p
+                    variants={items}
+                    className={` ${styles.textoDescripcion} `}
+                  >
                     descripcion 2
-                  </p>
-                  <p className={` ${styles.textoDescripcion} `}>
+                  </motion.p>
+                  <motion.p
+                    variants={items}
+                    className={` ${styles.textoDescripcion} `}
+                  >
                     descripcion 3
-                  </p>
-                </div>
+                  </motion.p>
+                </motion.div>
               </Col>
               <Col
                 xs={12}
@@ -45,28 +92,50 @@ const Cursos = () => {
                 className={`text-center mt-sm-5 mt-md-0 d-flex flex-column justify-content-center mt-4 mt-md-0 `}
               >
                 <p className={` ${styles.textos}`}>Con experiencia</p>
-                <div className="d-flex flex-column h-75 justify-content-around">
-                  <p className={` ${styles.textoDescripcion} `}>
+                <motion.div
+                  className="d-flex flex-column h-75 justify-content-around"
+                  variants={target}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: false, amount: 1 }}
+                >
+                  <motion.p
+                    className={` ${styles.textoDescripcion} `}
+                    variants={items}
+                  >
                     descripcion 1
-                  </p>
-                  <p className={` ${styles.textoDescripcion} `}>
+                  </motion.p>
+                  <motion.p
+                    className={` ${styles.textoDescripcion} `}
+                    variants={items}
+                  >
                     descripcion 2
-                  </p>
-                  <p className={` ${styles.textoDescripcion} `}>
+                  </motion.p>
+                  <motion.p
+                    className={` ${styles.textoDescripcion} `}
+                    variants={items}
+                  >
                     descripcion 3!
-                  </p>
-                </div>
+                  </motion.p>
+                </motion.div>
               </Col>
             </Row>
           </Col>
           <Row className="d-flex justify-content-end">
-            <Col xs={12} lg={6}>
-              <h2 className={`text-end mt-2 mt-md-5  p-0`}>Otra frase mas</h2>
+            <Col xs={12} lg={6} className="">
+              <h2 className={`text-end mt-2  mt-md-5  p-0`}>Otra frase mas</h2>
             </Col>
           </Row>
           <Row>
-            <Col xs={12} className="d-flex justify-content-center">
-              <ArrowDown />
+            <Col>
+              <motion.div
+                className="d-flex justify-content-center mb-5"
+                initial={{ y: -10 }}
+                transition={{ duration: 1, repeat: Infinity }}
+                animate={{ y: 50 }}
+              >
+                <ArrowDown />
+              </motion.div>
             </Col>
           </Row>
         </Row>

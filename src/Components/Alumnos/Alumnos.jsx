@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "./alumnos.module.css";
 import ArrowDown from "../Commons/ArrowDown/ArrowDown";
+import { motion } from "framer-motion";
 const Alumnos = () => {
   return (
     <Container
@@ -66,7 +67,18 @@ const Alumnos = () => {
           <h2> mas frasee....</h2>
         </Col>
       </Row>
-      <ArrowDown />
+      <Row>
+        <Col>
+          <motion.div
+            className="d-flex justify-content-center mb-5"
+            initial={{ y: -10 }}
+            transition={{ duration: 1, repeat: Infinity }}
+            animate={{ y: 50 }}
+          >
+            <ArrowDown />
+          </motion.div>
+        </Col>
+      </Row>
     </Container>
   );
 };

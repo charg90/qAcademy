@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import styles from "./cursos.module.css";
-import ArrowDown from "../Commons/ArrowDown/ArrowDown";
+
 import { TiTick } from "react-icons/ti";
 const Cursos = () => {
   return (
@@ -10,7 +10,7 @@ const Cursos = () => {
       className={`${styles.container} min-vh-100 d-flex flex-column justify-content-around align-items-center`}
     >
       <h2>Nuestro cursos</h2>
-      <Row>
+      <Row className="w-100">
         <Col
           sm={12}
           md={4}
