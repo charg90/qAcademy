@@ -7,8 +7,7 @@ import ArrowDown from "../Commons/ArrowDown/ArrowDown";
 //Framer motion
 import { motion, useAnimation } from "framer-motion";
 // react interseption observer
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+
 const Cursos = () => {
   // framer motion container  for make de stagger transition
 
