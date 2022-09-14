@@ -5,7 +5,7 @@ import logo from "./../../assets/Qcapital.webp";
 //commmon components
 import ArrowDown from "../Commons/ArrowDown/ArrowDown";
 //Framer motion
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 // react interseption observer
 
 const Cursos = () => {

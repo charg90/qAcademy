@@ -1,17 +1,46 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { motion } from "framer-motion";
 import styles from "./cursos.module.css";
 
 import { TiTick } from "react-icons/ti";
 const Cursos = () => {
+  const cardsContainer = {
+    how: {
+      transition: {
+        staggerChildren: 1.35,
+      },
+    },
+  };
+  const cards = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
   return (
     <Container
       fluid
       className={`${styles.container} min-vh-100 d-flex flex-column justify-content-around align-items-center`}
     >
       <h2>Nuestro cursos</h2>
-      <Row className="w-100">
+      <Row
+        className="w-100"
+        as={motion.div}
+        variants={cardsContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 1 }}
+      >
         <Col
+          as={motion.div}
+          variants={cards}
           sm={12}
           md={4}
           lg={4}
@@ -54,6 +83,8 @@ const Cursos = () => {
           </Card>
         </Col>
         <Col
+          as={motion.div}
+          variants={cards}
           sm={12}
           md={4}
           lg={4}
@@ -96,6 +127,8 @@ const Cursos = () => {
           </Card>
         </Col>
         <Col
+          as={motion.div}
+          variants={cards}
           sm={12}
           md={4}
           lg={4}
