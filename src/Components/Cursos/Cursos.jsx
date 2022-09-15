@@ -30,23 +30,21 @@ const Cursos = () => {
       className={`${styles.container} min-vh-100 d-flex flex-column justify-content-around align-items-center`}
     >
       <h2>Nuestro cursos</h2>
-      <Row
-        className="w-100"
-        as={motion.div}
-        variants={cardsContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 1 }}
-      >
+      <Row className="w-100">
         <Col
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 1 }}
           as={motion.div}
-          variants={cards}
+          variants={cardsContainer}
           sm={12}
           md={4}
           lg={4}
           className="mt-4 d-flex justify-content-center"
         >
           <Card
+            as={motion.div}
+            variants={cards}
             style={{ width: "18rem" }}
             className={` ${styles.cardBody} p-4 h-100`}
           >
@@ -83,14 +81,19 @@ const Cursos = () => {
           </Card>
         </Col>
         <Col
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 1 }}
           as={motion.div}
-          variants={cards}
+          variants={cardsContainer}
           sm={12}
           md={4}
           lg={4}
           className="mt-4 d-flex justify-content-center"
         >
           <Card
+            as={motion.div}
+            variants={cards}
             style={{ width: "18rem" }}
             className={` ${styles.cardBody} p-4 h-100`}
           >
@@ -127,14 +130,19 @@ const Cursos = () => {
           </Card>
         </Col>
         <Col
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 1 }}
           as={motion.div}
-          variants={cards}
+          variants={cardsContainer}
           sm={12}
           md={4}
           lg={4}
           className="mt-4 d-flex justify-content-center"
         >
           <Card
+            as={motion.div}
+            variants={cards}
             style={{ width: "18rem" }}
             className={` ${styles.cardBody} p-4 h-100`}
           >
