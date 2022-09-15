@@ -52,7 +52,7 @@ const Intro = () => {
           <motion.div
             className="d-flex justify-content-center "
             initial={{ y: 0 }}
-            transition={{ duration: 1, repeat: Infinity }}
+            transition={{ duration: 1.5, repeat: Infinity }}
             animate={{ y: 50 }}
           >
             <ArrowDown />

@@ -8,7 +8,7 @@ const Cursos = () => {
   const cardsContainer = {
     how: {
       transition: {
-        staggerChildren: 1.35,
+        staggerChildren: 0.35,
       },
     },
   };

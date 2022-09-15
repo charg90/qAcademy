@@ -72,8 +72,8 @@ const Alumnos = () => {
           <motion.div
             className="d-flex justify-content-center mb-5"
             initial={{ y: -10 }}
-            transition={{ duration: 1, repeat: Infinity }}
-            animate={{ y: 50 }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            animate={{ y: 40 }}
           >
             <ArrowDown />
           </motion.div>
