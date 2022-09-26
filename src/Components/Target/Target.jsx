@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 
 const Cursos = () => {
   // framer motion container  for make de stagger transition
-
   const target = {
     show: {
       transition: {
@@ -58,7 +57,7 @@ const Cursos = () => {
               >
                 <p className={` ${styles.textos}`}>Sin experiencia</p>
                 <motion.div
-                  className="d-flex flex-column h-75 justify-content-around "
+                  className="d-flex flex-column h-100 justify-content-around "
                   variants={target}
                   initial="hidden"
                   whileInView="show"
@@ -66,21 +65,21 @@ const Cursos = () => {
                 >
                   <motion.p
                     variants={items}
-                    className={` ${styles.textoDescripcion} `}
+                    className={` ${styles.textoDescripcion} text-start `}
                   >
-                    descripcion 1
+                    No es necesario que tengas experiencia previa
                   </motion.p>
                   <motion.p
                     variants={items}
-                    className={` ${styles.textoDescripcion} `}
+                    className={` ${styles.textoDescripcion} text-start `}
                   >
-                    descripcion 2
+                    No necesitas ningun titulo de grado
                   </motion.p>
                   <motion.p
                     variants={items}
-                    className={` ${styles.textoDescripcion} `}
+                    className={` ${styles.textoDescripcion} text-start `}
                   >
-                    descripcion 3
+                    Vas a comenzar de "Cero a Pro"
                   </motion.p>
                 </motion.div>
               </Col>
@@ -92,39 +91,42 @@ const Cursos = () => {
               >
                 <p className={` ${styles.textos}`}>Con experiencia</p>
                 <motion.div
-                  className="d-flex flex-column h-75 justify-content-around"
+                  className="d-flex flex-column h-100 justify-content-around"
                   variants={target}
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: false, amount: 1 }}
                 >
                   <motion.p
-                    className={` ${styles.textoDescripcion} `}
+                    className={` ${styles.textoDescripcion} mt-3 mt-md-0 text-start `}
                     variants={items}
                   >
-                    descripcion 1
+                    Mejoraras tu sistema de trading
                   </motion.p>
                   <motion.p
-                    className={` ${styles.textoDescripcion} `}
+                    className={` ${styles.textoDescripcion} mt-2 mt-md-0 text-start`}
                     variants={items}
                   >
-                    descripcion 2
+                    Aprenderas nuevas herramientas de solucion de problemas
                   </motion.p>
                   <motion.p
-                    className={` ${styles.textoDescripcion} `}
+                    className={` ${styles.textoDescripcion} mt-4 mt-md-0 text-start`}
                     variants={items}
                   >
-                    descripcion 3!
+                    Dominaras todos los mercados financieros como trader o
+                    inversor
                   </motion.p>
                 </motion.div>
               </Col>
             </Row>
           </Col>
-          <Row className="d-flex justify-content-end">
+          {/* <Row className="d-flex justify-content-end">
             <Col xs={12} lg={6} className="">
-              <h2 className={`text-end mt-2  mt-md-5  p-0`}>Otra frase mas</h2>
+              <h2 className={`${styles.frase} text-end mt-5  mt-md-5  p-0`}>
+                Unos meses de estudio, para una vida de Libertad
+              </h2>
             </Col>
-          </Row>
+          </Row> */}
           <Row>
             <Col>
               <motion.div

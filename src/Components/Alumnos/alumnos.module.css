@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playball&family=Spectral:wght@300&display=swap");
 .container {
   background: rgb(0, 240, 223);
   background: linear-gradient(
@@ -6,4 +7,10 @@
     rgba(0, 12, 36, 1) 100%
   );
   color: #000c24;
+}
+.frase {
+  font-family: "Playball", "sans-serif";
+  color: #800080;
+  font-size: 45px;
+  text-shadow: rgba(0, 240, 224, 1) 0px 0px 36px;
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playball&family=Spectral:wght@300&display=swap");
 .container {
   background: rgb(0, 12, 36);
   background: linear-gradient(
@@ -5,7 +6,7 @@
     rgba(0, 12, 36, 1) 97%,
     rgba(0, 240, 223, 1) 99%
   );
-  font-family: "Merriweather", serif;
+  font-family: "Spectral", cursive;
   font-weight: bold;
   color: #00f0df;
 }
@@ -24,11 +25,15 @@
   -webkit-box-shadow: 0px 0px 33px 9px rgba(0, 240, 224, 1);
   -moz-box-shadow: 0px 0px 33px 9px rgba(0, 240, 224, 1);
   box-shadow: 0px 0px 33px 9px rgba(0, 240, 224, 1);
+  font-size: 30px;
 }
 
 .textoDescripcion {
   color: #00f0df;
-  border-bottom: 2px solid #00f0df;
+  font-family: "Spectral", serif;
+
+  font-size: 20px;
+  height: 55px;
 }
 
 .titulo {
@@ -41,6 +46,10 @@
   color: #00f0df;
 }
 
+.frase {
+  font-family: "Playball";
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* Styles */
@@ -48,6 +57,10 @@
     height: 15rem;
     width: 15rem;
     border-radius: 50%;
+  }
+
+  .frase {
+    font-size: 20px;
   }
 }
 
@@ -59,24 +72,4 @@
     width: 15rem;
     border-radius: 50%;
   }
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* Styles */
-}
-
-/* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
-  /* Styles */
-}
-
-/* Large screens ----------- */
-@media only screen and (min-width: 1824px) {
-  /* Styles */
 }

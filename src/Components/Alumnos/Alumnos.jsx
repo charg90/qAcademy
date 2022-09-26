@@ -64,7 +64,10 @@ const Alumnos = () => {
       </Row>
       <Row>
         <Col>
-          <h2> mas frasee....</h2>
+          <h2 className={`${styles.frase}`}>
+            {" "}
+            Unos meses de estudio, para una vida de Libertad
+          </h2>
         </Col>
       </Row>
       <Row>
