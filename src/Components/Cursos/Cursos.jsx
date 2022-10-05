@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { motion } from "framer-motion";
+import InversorBursatil from "./../../assets/Inversor Bursatil.jpg";
+import Combo from "./../../assets/Combo.jpg";
 import styles from "./cursos.module.css";
 
 import { TiTick } from "react-icons/ti";
@@ -104,10 +106,7 @@ const Cursos = () => {
             className={` ${styles.cardBody} p-4 h-100`}
           >
             <Card.Body className="d-flex flex-column d-flex justify-content-around">
-              <Card.Img
-                variant="top"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIeLLJAsGAECjOQytQ4qm0QNrJfaW58NyxCA&usqp=CAU"
-              />
+              <Card.Img variant="top" src={InversorBursatil} />
               <Card.Title className={`${styles.titleText} text-center`}>
                 Inversor Bursatil
               </Card.Title>
@@ -165,17 +164,14 @@ const Cursos = () => {
             className={` ${styles.cardBody} p-4 h-100`}
           >
             <Card.Body className="d-flex flex-column d-flex justify-content-around">
-              <Card.Img
-                variant="top"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIeLLJAsGAECjOQytQ4qm0QNrJfaW58NyxCA&usqp=CAU"
-              />
+              <Card.Img variant="top" src={Combo} />
               <Card.Title className={`${styles.titleText} text-center`}>
-                Trader/Inversor Bursatil
+                Combo: Trader/Inversor Bursatil
               </Card.Title>
               <Card.Subtitle
                 className={`${styles.titleText} mb-2  text-center`}
               >
-                descripcion corta del curso
+                Obten bonos especiales
               </Card.Subtitle>
               <div className="">
                 <Card.Text className="d-flex flex-column align-items-center   ">

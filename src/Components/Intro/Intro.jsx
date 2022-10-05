@@ -1,8 +1,9 @@
 import React from "react";
-import styles from "./Intro.module.css";
+import styles from "./intro.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import banner from "../../assets/Banner-web.webp";
 import ArrowDown from "./../Commons/ArrowDown/ArrowDown";
+import FotoPerfil from "./../../assets/Foto Perfil.jpg";
 import { motion } from "framer-motion";
 const Intro = () => {
   return (
@@ -15,12 +16,19 @@ const Intro = () => {
           <img src={banner} className={`${styles.banner} p-0 w-100 `}></img>
         </Col>
       </Row>
-      <Row className="d-flex justify-content-around align-items-center mt-5 mb-5 p-0">
-        <Col xs={12} sm={12} lg={6} className="d-flex justify-content-center">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDkubybETfGZg8E0_SH-SY3wF_TcjxnPIzoA&usqp=CAU"
-            className={`${styles.profilePhoto} justify-content-center align-items-center`}
-          ></img>
+      <Row className="d-flex justify-content-around align-items-center mt-5 mb-5 p-0 ">
+        <Col
+          xs={12}
+          sm={12}
+          lg={4}
+          className={` ${styles.profileFoto_container} d-flex flex-column justify-content-center align-items-center   `}
+        >
+          <img src={FotoPerfil} className={`${styles.profilePhoto} `} />
+
+          <p className={`${styles.nombre}`}>Damian Quiros</p>
+          <p className={`${styles.ceo}`}>
+            CEO Q | Capital-Stock Market Academy
+          </p>
         </Col>
         <Col
           xs={12}
