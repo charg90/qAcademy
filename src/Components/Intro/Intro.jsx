@@ -3,7 +3,7 @@ import styles from "./intro.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import banner from "../../assets/Banner-web.webp";
 import ArrowDown from "./../Commons/ArrowDown/ArrowDown";
-import FotoPerfil from "./../../assets/Foto Perfil.jpg";
+import FotoPerfil from "./../../assets/Foto_Perfil-removebg-preview.png";
 import { motion } from "framer-motion";
 const Intro = () => {
   return (

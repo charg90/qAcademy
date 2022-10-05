@@ -12,6 +12,7 @@
 .profilePhoto {
   height: 20rem;
   width: 20rem;
+  border: 6px;
 }
 .nombre {
   font-size: 24px;
