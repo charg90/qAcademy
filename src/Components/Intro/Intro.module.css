@@ -7,18 +7,19 @@
 .banner {
   height: 35vh;
 }
-.profileFoto_container {
-}
+
 .profilePhoto {
-  height: 20rem;
-  width: 20rem;
+  height: 15rem;
+  width: 15rem;
   border: 6px;
 }
 .nombre {
+  color: #fff;
   font-size: 24px;
   margin: 0px;
 }
 .ceo {
+  color: #fff;
   border-top: 1px solid red;
   font-size: 18px;
 }
