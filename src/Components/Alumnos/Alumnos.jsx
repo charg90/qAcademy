@@ -9,7 +9,7 @@ const Alumnos = () => {
       fluid
       className={`${styles.container} min-vh-100  d-flex flex-column justify-content-around align-items-center`}
     >
-      <h2>Nuestro Alumnos</h2>
+      <h2 className={styles.text}>Nuestro Alumnos</h2>
       <Row className="w-100 ">
         <Col
           sm={12}

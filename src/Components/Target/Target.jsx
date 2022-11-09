@@ -6,8 +6,7 @@ import logo from "./../../assets/Qcapital.webp";
 import ArrowDown from "../Commons/ArrowDown/ArrowDown";
 //Framer motion
 import { motion } from "framer-motion";
-// react interseption observer
-
+import { TiTick } from "react-icons/ti";
 const Cursos = () => {
   // framer motion container  for make de stagger transition
   const target = {
@@ -65,21 +64,24 @@ const Cursos = () => {
                 >
                   <motion.p
                     variants={items}
-                    className={` ${styles.textoDescripcion} text-start `}
+                    className={` ${styles.textoDescripcion} text-center `}
                   >
-                    No es necesario que tengas experiencia previa
+                    <TiTick color=" FF0000" size={30} /> No es necesario que
+                    tengas experiencia previa
                   </motion.p>
                   <motion.p
                     variants={items}
-                    className={` ${styles.textoDescripcion} text-start `}
+                    className={` ${styles.textoDescripcion} text-center `}
                   >
-                    No necesitas ningun titulo de grado
+                    <TiTick color=" FF0000" size={30} /> No necesitas ningun
+                    titulo de grado
                   </motion.p>
                   <motion.p
                     variants={items}
-                    className={` ${styles.textoDescripcion} text-start `}
+                    className={` ${styles.textoDescripcion} text-center `}
                   >
-                    Vas a comenzar de "Cero a Pro"
+                    <TiTick color=" FF0000" size={30} /> Vas a comenzar de "Cero
+                    a Pro"
                   </motion.p>
                 </motion.div>
               </Col>
@@ -98,21 +100,24 @@ const Cursos = () => {
                   viewport={{ once: false, amount: 1 }}
                 >
                   <motion.p
-                    className={` ${styles.textoDescripcion} mt-3 mt-md-0 text-start `}
+                    className={` ${styles.textoDescripcion} mt-3 mt-md-0 text-center `}
                     variants={items}
                   >
-                    Mejoraras tu sistema de trading
+                    <TiTick color=" FF0000" size={30} /> Mejoraras tu sistema de
+                    trading
                   </motion.p>
                   <motion.p
-                    className={` ${styles.textoDescripcion} mt-2 mt-md-0 text-start`}
+                    className={` ${styles.textoDescripcion} mt-2 mt-md-0 text-center`}
                     variants={items}
                   >
+                    <TiTick color=" FF0000" size={30} />
                     Aprenderas nuevas herramientas de solucion de problemas
                   </motion.p>
                   <motion.p
-                    className={` ${styles.textoDescripcion} mt-4 mt-md-0 text-start`}
+                    className={` ${styles.textoDescripcion} mt-4 mt-md-0 text-center`}
                     variants={items}
                   >
+                    <TiTick color=" FF0000" size={30} />
                     Dominaras todos los mercados financieros como trader o
                     inversor
                   </motion.p>

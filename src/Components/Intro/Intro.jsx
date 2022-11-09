@@ -23,7 +23,10 @@ const Intro = () => {
           lg={4}
           className={` ${styles.profileFoto_container} d-flex flex-column justify-content-center align-items-center   `}
         >
-          <img src={FotoPerfil} className={`${styles.profilePhoto} `} />
+          <img
+            src={FotoPerfil}
+            className={`${styles.profilePhoto} rounded-circle `}
+          />
 
           <p className={`${styles.nombre}`}>Damian Quiros</p>
           <p className={`${styles.ceo}`}>
