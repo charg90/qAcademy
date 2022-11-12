@@ -37,7 +37,8 @@ const Cursos = () => {
     <>
       <Container
         fluid
-        className={`${styles.container} min-vh-100 d-flex flex-column justify-content-around align-items-center`}
+        className={`${styles.container} max-vh-100 d-flex flex-column justify-content-around align-items-center`}
+        id="target"
       >
         <h2>Par quien son nuestro cursos</h2>
 

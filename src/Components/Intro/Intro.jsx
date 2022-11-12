@@ -10,10 +10,11 @@ const Intro = () => {
     <Container
       fluid
       className={`${styles.container} min-vh-100 d-flex flex-column `}
+      id="intro"
     >
-      <Row>
-        <Col className="p-0">
-          <img src={banner} className={`${styles.banner} p-0 w-100 `}></img>
+      <Row className="d-flex justify-content-center">
+        <Col className="p-0 d-flex justify-content-center">
+          <img src={banner} className={`${styles.banner} p-0 w-75 `}></img>
         </Col>
       </Row>
       <Row className="d-flex justify-content-around align-items-center mt-5 mb-5 p-0 ">
@@ -39,7 +40,7 @@ const Intro = () => {
           lg={6}
           className="d-flex  justify-content-center flex-column"
         >
-          <p>
+          <p className="w-75">
             Déjame comentarte un poco a que me dedico. Soy trader profesional ya
             hace varios años, me inicie en el mundo de la economía en el año
             2015, operando primeramente en el mercado local. Al notar una

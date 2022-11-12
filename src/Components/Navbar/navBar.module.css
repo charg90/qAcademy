@@ -1,0 +1,21 @@
+.nav {
+  background-color: #000c24;
+}
+
+.wrapper {
+  background-color: #000c24;
+  position: sticky;
+  top: 0;
+}
+
+.bar {
+  color: red;
+}
+
+.links {
+  text-decoration: none !important;
+}
+.links :visited {
+  background-color: pink;
+  text-decoration: none;
+}

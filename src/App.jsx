@@ -4,9 +4,11 @@ import Target from "./Components/Target/Target";
 import Alumnos from "./Components/Alumnos/Alumnos";
 import Footer from "./Components/Footer/Footer";
 import Cursos from "./Components/Cursos/Cursos";
+import Navbar from "./Components/Navbar/NavBar";
 function App() {
   return (
     <>
+      <Navbar />
       <Intro />
       <Target />
       <Alumnos />
