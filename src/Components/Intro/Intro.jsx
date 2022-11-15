@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./intro.module.css";
+import styles from "./Intro.module.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import banner from "../../assets/Banner-web.webp";
 import ArrowDown from "./../Commons/ArrowDown/ArrowDown";
