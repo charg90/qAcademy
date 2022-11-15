@@ -24,24 +24,13 @@
   font-size: 18px;
 }
 
-/* xs < 768 */
-@media screen and (max-width: 767px) {
-}
-
-/* sm */
-@media screen and (min-width: 768px) {
-  .container {
-  }
-}
-
-/* md */
-@media screen and (min-width: 941px) {
-  .container {
-  }
-}
-
-/* lg */
-@media screen and (min-width: 1200px) {
-  .container {
-  }
+.button {
+  background-color: rgb(0, 240, 223) !important;
+  color: rgba(0, 12, 36, 1);
+  border-radius: 66px;
+  width: 150px;
+  border: none;
+  outline: none;
+  font-family: "Montserrat";
+  font-weight: 500;
 }

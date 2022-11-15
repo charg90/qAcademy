@@ -27,7 +27,7 @@ const NavBar = () => {
                 style={{ textDecoration: "none !important" }}
               >
                 <Link
-                  to="aboutMe"
+                  to="target"
                   smooth={true}
                   offset={0}
                   duration={500}
