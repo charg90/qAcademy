@@ -1,5 +1,5 @@
 import React from "react";
-import { BsInstagram, BsYoutube } from "react-icons/bs";
+import { BsInstagram, BsYoutube, BsMusicNote } from "react-icons/bs";
 import { FaDiscord } from "react-icons/fa";
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "./footer.module.css";
@@ -29,9 +29,17 @@ const Footer = () => {
           >
             <BsYoutube size={30} />
           </a>
+          <a
+            href="https://www.tiktok.com/@qcapitalacademy?_t=8XO2W74NhuX&_r=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.footer_links} `}
+          >
+            <BsMusicNote size={30} />
+          </a>
         </Col>
         <Col className="d-flex justify-content-center">
-          <p>mail@gmail.com</p>
+          <p>qcapital.academy@gmail.com</p>
         </Col>
       </Row>
     </Container>

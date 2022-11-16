@@ -61,7 +61,7 @@ const Intro = () => {
             className={`${styles.button}`}
             onClick={() => setShowMore(!showMore)}
           >
-            Ver Mas
+            {!showMore ? "Ver Mas" : "Ver Menos"}
           </Button>
         </Col>
         <Row>
