@@ -1,0 +1,12 @@
+.container {
+  background: rgb(45, 4, 53);
+  background: linear-gradient(
+    180deg,
+    rgba(45, 4, 53, 1) 86%,
+    rgba(0, 12, 36, 1) 100%
+  );
+  color: #00f0df;
+}
+
+/* #000c24
+#2d0435 */

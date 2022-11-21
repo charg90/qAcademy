@@ -12,7 +12,7 @@ const Alumnos = () => {
     >
       <h2 className={styles.text}>Quien Soy ?</h2>
 
-      <Row className="d-flex justify-content-between align-items-center w-75">
+      <Row className="d-flex justify-content-between align-items-center w-75 mt-4">
         <Col sm={12} lg={6} className="">
           <video
             src="https://res.cloudinary.com/dnxh0fyqg/video/upload/v1668633744/Trading_-_Inversiones_Burs%C3%A1tiles_Q___Capital_-Stock_Market_Academy_Viv%C3%AD_algo_DIFERENTE_ufkkrm.mp4"

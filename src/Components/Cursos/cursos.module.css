@@ -1,5 +1,11 @@
 .container {
-  background-color: #000c24;
+  background: rgb(0, 12, 36);
+  background: rgb(0, 12, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 12, 36, 1) 86%,
+    rgba(45, 4, 53, 1) 100%
+  );
   color: #00f0df;
 }
 
