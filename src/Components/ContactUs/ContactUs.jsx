@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Button, FloatingLabel, Form, Row } from "react-bootstrap";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import styles from "./contactUs.module.css";
+import styles from "./ContactUs.module.css";
 
 const ContactUs = () => {
   const schema = yup
