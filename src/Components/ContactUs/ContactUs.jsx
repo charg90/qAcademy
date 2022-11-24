@@ -40,29 +40,40 @@ const ContactUs = () => {
   };
 
   return (
-    <Row fuild className={`${styles.container} min-vh-100 d-flex `}>
+    <Row fuild className={`${styles.container} min-vh-100 d-flex  `}>
       <div className="d-flex justify-content-center align-items-center">
-        <Form onSubmit={handleSubmit(onSubmit)} className="w-75">
+        <Form
+          onSubmit={handleSubmit(onSubmit)}
+          className={`${styles.formContact} p-4`}
+        >
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Nombre y Apellido* </Form.Label>
+            <Form.Label className={`${styles.formLabels}`}>
+              Nombre y Apellido*{" "}
+            </Form.Label>
             <Form.Control
               type="text"
               placeholder="Nombre y Apellido"
               {...register("nombreCompleto")}
+              className={`${styles.formInputs}`}
             />
           </Form.Group>
           {errors.nombreCompleto && (
-            <p>{errors.nombreCompleto.message.message}</p>
+            <p className={`${styles.formErrors}`}>
+              {errors.nombreCompleto.message.message}
+            </p>
           )}
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email* </Form.Label>
+            <Form.Label className={`${styles.formLabels}`}>Email* </Form.Label>
             <Form.Control
               type="text"
               placeholder="qcapital@example.com"
               {...register("email")}
+              className={`${styles.formInputs}`}
             />
           </Form.Group>
-          <p>{errors.email && errors.email.message.message}</p>
+          <p className={`${styles.formErrors}`}>
+            {errors.email && errors.email.message.message}
+          </p>
 
           <FloatingLabel controlId="floatingTextarea2" label="Charlemos">
             <Form.Control
@@ -72,7 +83,9 @@ const ContactUs = () => {
               {...register("comentarios")}
             />
           </FloatingLabel>
-          <p>{errors.comentarios && errors.comentarios.message.message}</p>
+          <p className={`${styles.formErrors}`}>
+            {errors.comentarios && errors.comentarios.message.message}
+          </p>
           <Button className="mt-2" variant="primary" type="submit">
             Submit
           </Button>
