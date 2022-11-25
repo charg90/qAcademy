@@ -7,7 +7,9 @@
   );
   /* color: #00f0df; */
 }
-
+h2 {
+  color: #00f0df;
+}
 .formContact {
   background-color: #000c24;
   width: 700px;

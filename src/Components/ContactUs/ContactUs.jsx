@@ -41,7 +41,8 @@ const ContactUs = () => {
 
   return (
     <Row fuild className={`${styles.container} min-vh-100 d-flex  `}>
-      <div className="d-flex justify-content-center align-items-center">
+      <div className="d-flex flex-column justify-content-center align-items-center">
+        <h2 className="mb-4"> Contacto </h2>
         <Form
           onSubmit={handleSubmit(onSubmit)}
           className={`${styles.formContact} p-4`}
@@ -74,8 +75,10 @@ const ContactUs = () => {
           <p className={`${styles.formErrors}`}>
             {errors.email && errors.email.message.message}
           </p>
-
-          <FloatingLabel controlId="floatingTextarea2" label="Charlemos">
+          <Form.Label className={`${styles.formLabels}`}>
+            Charlemos*{" "}
+          </Form.Label>
+          <FloatingLabel controlId="floatingTextarea2">
             <Form.Control
               as="textarea"
               placeholder="Leave a comment here"
