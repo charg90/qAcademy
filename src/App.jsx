@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       {" "}
-      <Container fluid className="bg">
+      <Container fluid className="bg ">
         <Navbar />
         <Intro />
         <Target />
