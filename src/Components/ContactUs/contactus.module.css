@@ -26,5 +26,13 @@ h2 {
 .formErrors {
   color: red;
 }
+
+@media (min-width: 1400px) {
+  /* .formInputs {
+    width: 75%;
+    justify-content: center;
+  } */
+}
+
 /* #000c24
 #2d0435 */
