@@ -27,12 +27,16 @@ h2 {
   color: red;
 }
 
-@media (min-width: 1400px) {
-  /* .formInputs {
-    width: 75%;
-    justify-content: center;
-  } */
+.btnContact {
+  background-color: transparent;
+  border: #00f0df solid 3px;
+  color: #00f0df;
+  width: 151px;
+  height: 50px;
+  border-radius: 50px;
 }
-
-/* #000c24
-#2d0435 */
+.btnContact:hover {
+  transition: 0.5s;
+  background-color: #00f0df;
+  color: #000c24;
+}

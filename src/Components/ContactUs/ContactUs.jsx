@@ -1,58 +1,20 @@
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useRef, useState } from "react";
+import sendEmail from "./../../Services/Email/sendEmail";
 import { useForm } from "react-hook-form";
 import { Button, Col, FloatingLabel, Form, Row } from "react-bootstrap";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import { contactSchema } from "./../Schemas/ContactSchema";
 import styles from "./contactus.module.css";
 
 const ContactUs = () => {
   const form = useRef();
-  const sendEmail = (data) => {
-    console.log(form.current);
-
-    emailjs
-      .sendForm(
-        "service_f3uv7pg",
-        "template_xlqgvbr",
-        form.current,
-        "jnaxoL854aOS04eZk"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
-
-  const schema = yup
-    .object()
-    .shape({
-      nombreCompleto: yup
-        .string()
-        .min(4, { message: "tiene que tener mas 4 caracteres" })
-        .max(15, { message: "Demasiado largo" })
-        .required({ message: "campo requerido" }),
-      email: yup
-        .string()
-        .email({ message: "tiene que tener formato de mail" })
-        .required({ message: "campo requerido" }),
-      comentarios: yup
-        .string()
-        .max(200, { message: "Comentario demasiado largo" }),
-    })
-    .required();
-
   const {
     register,
     handleSubmit,
-
+    reset,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(contactSchema),
   });
 
   return (
@@ -63,7 +25,7 @@ const ContactUs = () => {
       <Col sm={12} md={6} lg={6} className=" ">
         <h2 className="mb-4 text-center"> Contacto </h2>
         <Form
-          onSubmit={handleSubmit(sendEmail)}
+          onSubmit={handleSubmit(() => sendEmail(form, reset))}
           className={`${styles.formContact} p-4  `}
           ref={form}
         >
@@ -120,9 +82,13 @@ const ContactUs = () => {
           <p className={`${styles.formErrors} text-center`}>
             {errors.comentarios && errors.comentarios.message.message}
           </p>
-          <Button className="mt-2" variant="primary" type="submit">
-            Submit
-          </Button>
+          <button
+            className={`${styles.btnContact}`}
+            variant="primary"
+            type="submit"
+          >
+            enviar
+          </button>
         </Form>
       </Col>
     </Row>
