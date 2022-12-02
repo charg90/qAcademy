@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,400;1,500&display=swap");
+
 .container {
   color: rgb(0, 240, 223);
   background: rgba(0, 12, 36, 1) 52%;
-  font-family: "Montserrat", serif;
+  font-family: "Roboto", sans-serif;
+
   font-weight: bold;
+}
+.info {
+  font-family: "Roboto", sans-serif;
 }
 .banner {
   height: 35vh;
