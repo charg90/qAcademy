@@ -29,7 +29,7 @@ const Cursos = () => {
   return (
     <Container
       fluid
-      className={`${styles.container} min-vh-100 d-flex flex-column justify-content-around align-items-center w-100`}
+      className={`${styles.container} min-vh-100 d-flex flex-column justify-content-around align-items-center w-100 p-0`}
       id="cursos"
     >
       <Row className="w-75 d-flex justify-content-center">
@@ -42,7 +42,7 @@ const Cursos = () => {
             as={motion.div}
             variants={cardsContainer}
             sm={12}
-            md={4}
+            md={12}
             lg={4}
             className="mt-4 d-flex justify-content-center"
           >
@@ -97,7 +97,7 @@ const Cursos = () => {
             as={motion.div}
             variants={cardsContainer}
             sm={12}
-            md={4}
+            md={12}
             lg={4}
             className="mt-4 d-flex justify-content-center"
           >
@@ -158,7 +158,7 @@ const Cursos = () => {
             as={motion.div}
             variants={cardsContainer}
             sm={12}
-            md={4}
+            md={12}
             lg={4}
             className="mt-4 d-flex justify-content-center"
           >
@@ -193,7 +193,7 @@ const Cursos = () => {
                       </div>
                       <div className="d-flex ">
                         <TiTick size={30} color=" FF0000" />
-                        <p className={`${styles.text} m-0`}>
+                        <p className={`${styles.text} m-0 w-100`}>
                           Pymes en los Mercados
                         </p>
                       </div>

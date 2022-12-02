@@ -37,12 +37,12 @@ const Cursos = () => {
     <>
       <Container
         fluid
-        className={`${styles.container} max-vh-100 d-flex flex-column justify-content-around align-items-center`}
+        className={`${styles.container} max-vh-100 d-flex flex-column justify-content-around align-items-center `}
         id="target"
       >
         <h2>Par quien son nuestro cursos</h2>
 
-        <Row className={`d-flex  w-100 `}>
+        <Row className={`d-flex  w-100 mt-2`}>
           <Col xs={12} lg={6} className="d-flex justify-content-center">
             <img src={logo} className={`${styles.logo} img-fluid `} />
           </Col>
