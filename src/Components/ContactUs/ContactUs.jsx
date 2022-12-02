@@ -20,7 +20,7 @@ const ContactUs = () => {
   return (
     <Row
       fuild
-      className={`${styles.container} min-vh-100 d-flex  align-items-center justify-content-center  `}
+      className={`${styles.container} min-vh-100 d-flex  align-items-center justify-content-center m-0  `}
       id="contacto"
     >
       <Col sm={12} md={6} lg={6} className=" ">
