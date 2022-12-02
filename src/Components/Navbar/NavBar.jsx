@@ -58,6 +58,17 @@ const NavBar = () => {
                   <div>Nuestros Cursos</div>
                 </Link>
               </Nav.Link>
+              <Nav.Link className={`${styles.links}`}>
+                <Link
+                  to="contacto"
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div>Contacto</div>
+                </Link>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
