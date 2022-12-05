@@ -43,7 +43,11 @@ const Cursos = () => {
         <h2>Par quien son nuestro cursos</h2>
 
         <Row className={`${styles.rowTarget} d-flex  w-100`}>
-          <Col xs={12} lg={6} className="d-flex justify-content-center">
+          <Col
+            xs={12}
+            lg={6}
+            className="d-flex justify-content-center align-items-center"
+          >
             <img src={logo} className={`${styles.logo} img-fluid `} />
           </Col>
 
@@ -53,7 +57,7 @@ const Cursos = () => {
                 xs={12}
                 md={12}
                 lg={6}
-                className={` ${styles.texto} d-flex flex-column justify-content-center  mb-xs-4 `}
+                className={` ${styles.texto} d-flex flex-column justify-content-center  mb-xss-4 `}
               >
                 <p className={` ${styles.textos} text-center`}>
                   Sin experiencia
