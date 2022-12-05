@@ -37,12 +37,12 @@ const Cursos = () => {
     <>
       <Container
         fluid
-        className={`${styles.container} max-vh-100 d-flex flex-column justify-content-around align-items-center `}
+        className={`${styles.container} d-flex flex-column justify-content-around align-items-center `}
         id="target"
       >
         <h2>Par quien son nuestro cursos</h2>
 
-        <Row className={`d-flex  w-100 mt-2`}>
+        <Row className={`${styles.rowTarget} d-flex  w-100`}>
           <Col xs={12} lg={6} className="d-flex justify-content-center">
             <img src={logo} className={`${styles.logo} img-fluid `} />
           </Col>
@@ -53,86 +53,136 @@ const Cursos = () => {
                 xs={12}
                 md={12}
                 lg={6}
-                className={`text-center ${styles.texto} d-flex flex-column justify-content-center `}
+                className={` ${styles.texto} d-flex flex-column justify-content-center  mb-xs-4 `}
               >
-                <p className={` ${styles.textos}`}>Sin experiencia</p>
+                <p className={` ${styles.textos} text-center`}>
+                  Sin experiencia
+                </p>
                 <motion.div
-                  className="d-flex flex-column h-100 justify-content-around "
+                  className="d-flex flex-column h-100 justify-content-around  "
                   variants={target}
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: false, amount: 1 }}
                 >
-                  <motion.p
+                  <motion.div
                     variants={items}
-                    className={` ${styles.textoDescripcion} text-center `}
+                    className="d-flex justify-content-center     "
                   >
-                    <TiTick color=" FF0000" size={30} /> No es necesario que
-                    tengas experiencia previa
-                  </motion.p>
-                  <motion.p
+                    <div>
+                      <TiTick
+                        color=" FF0000"
+                        size={40}
+                        className={`${styles.svgTarget}`}
+                      />
+                    </div>
+                    <p
+                      variants={items}
+                      className={` ${styles.textoDescripcion}     `}
+                    >
+                      No es necesario que tengas experiencia previa
+                    </p>
+                  </motion.div>
+                  <motion.div
                     variants={items}
-                    className={` ${styles.textoDescripcion} text-center `}
+                    className="d-flex  justify-content-center "
                   >
-                    <TiTick color=" FF0000" size={30} /> No necesitas ningun
-                    titulo de grado
-                  </motion.p>
-                  <motion.p
+                    <div>
+                      <TiTick
+                        color=" FF0000"
+                        size={40}
+                        className={`${styles.svgTarget}`}
+                      />
+                    </div>
+                    <p className={` ${styles.textoDescripcion}   `}>
+                      No necesitas ningun titulo de grado
+                    </p>
+                  </motion.div>
+                  <motion.div
                     variants={items}
-                    className={` ${styles.textoDescripcion} text-center `}
+                    className="d-flex justify-content-center  "
                   >
-                    <TiTick color=" FF0000" size={30} /> Vas a comenzar de "Cero
-                    a Pro"
-                  </motion.p>
+                    <div>
+                      <TiTick
+                        color=" FF0000"
+                        size={40}
+                        className={`${styles.svgTarget}`}
+                      />
+                    </div>
+                    <p className={` ${styles.textoDescripcion}  `}>
+                      Vas a comenzar de "Cero a Pro"
+                    </p>
+                  </motion.div>
                 </motion.div>
               </Col>
               <Col
                 xs={12}
                 md={12}
                 lg={6}
-                className={`text-center mt-sm-5 mt-md-0 d-flex flex-column justify-content-center mt-4 mt-md-0 `}
+                className={` mt-sm-5 mt-md-0 d-flex flex-column justify-content-center  mt-md-0 `}
               >
-                <p className={` ${styles.textos}`}>Con experiencia</p>
+                <p className={` ${styles.textos} text-center`}>
+                  Con experiencia
+                </p>
                 <motion.div
-                  className="d-flex flex-column h-100 justify-content-around"
+                  className={`${styles.textContainer} d-flex flex-column h-100 justify-content-around`}
                   variants={target}
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: false, amount: 1 }}
                 >
-                  <motion.p
-                    className={` ${styles.textoDescripcion} mt-3 mt-md-0 text-center `}
+                  <motion.div
                     variants={items}
+                    className={`${styles.textContainer} d-flex  justify-content-center  `}
                   >
-                    <TiTick color=" FF0000" size={30} /> Mejoraras tu sistema de
-                    trading
-                  </motion.p>
-                  <motion.p
-                    className={` ${styles.textoDescripcion} mt-2 mt-md-0 text-center`}
+                    <div>
+                      <TiTick
+                        size={40}
+                        color=" FF0000"
+                        className={`${styles.svgTarget}`}
+                      />
+                    </div>
+                    <p className={` ${styles.textoDescripcion}  mt-md-0  `}>
+                      Mejoraras tu sistema de trading
+                    </p>
+                  </motion.div>
+                  <motion.div
                     variants={items}
+                    className="d-flex justify-content-center  "
                   >
-                    <TiTick color=" FF0000" size={30} />
-                    Aprenderas nuevas herramientas de solucion de problemas
-                  </motion.p>
-                  <motion.p
-                    className={` ${styles.textoDescripcion} mt-4 mt-md-0 text-center`}
+                    <div>
+                      <TiTick
+                        size={40}
+                        color=" FF0000"
+                        className={`${styles.svgTarget}`}
+                      />
+                    </div>
+                    <p className={` ${styles.textoDescripcion}  mt-md-0 `}>
+                      Aprenderas nuevas herramientas de solucion de problemas
+                    </p>
+                  </motion.div>
+                  <motion.div
                     variants={items}
+                    className="d-flex justify-content-center "
                   >
-                    <TiTick color=" FF0000" size={30} />
-                    Dominaras todos los mercados financieros como trader o
-                    inversor
-                  </motion.p>
+                    <div>
+                      <TiTick
+                        size={40}
+                        color=" FF0000"
+                        className={`${styles.svgTarget}`}
+                      />
+                    </div>
+
+                    <p className={` ${styles.textoDescripcion} mb-0 `}>
+                      Dominaras todos los mercados financieros como trader o
+                      inversor
+                    </p>
+                  </motion.div>
                 </motion.div>
               </Col>
             </Row>
           </Col>
-          {/* <Row className="d-flex justify-content-end">
-            <Col xs={12} lg={6} className="">
-              <h2 className={`${styles.frase} text-end mt-5  mt-md-5  p-0`}>
-                Unos meses de estudio, para una vida de Libertad
-              </h2>
-            </Col>
-          </Row> */}
+
           <Row>
             <Col>
               <motion.div
