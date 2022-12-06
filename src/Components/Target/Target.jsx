@@ -114,7 +114,10 @@ const Cursos = () => {
                       />
                     </div>
                     <p className={` ${styles.textoDescripcion}  `}>
-                      Vas a comenzar de "Cero a Pro"
+                      Vas a comenzar de{" "}
+                      <span className={`${styles.spanTarget}`}>
+                        "Cero a Pro"
+                      </span>
                     </p>
                   </motion.div>
                 </motion.div>
