@@ -30,9 +30,9 @@
   box-shadow: 0px 0px 33px 9px rgba(0, 240, 224, 1);
   font-size: 30px;
 }
-/* .textContainer {
-  width: 300px;
-} */
+.spanTarget {
+  display: block;
+}
 .textoDescripcion {
   color: #00f0df;
   font-family: "Spectral", serif;

@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import InversorBursatil from "./../../assets/Inversor Bursatil.jpg";
 import Combo from "./../../assets/Combo.jpg";
 import styles from "./cursos.module.css";
+import { ModalScalping } from "../Modals/ModalScalping/ModalScalping";
+import ModalInver from "../Modals/ModalInver/ModalInver";
+import ModalTraderInver from "../Modals/ModalTraderInv/ModalTraderInver";
 
 import { TiTick } from "react-icons/ti";
 const Cursos = () => {
@@ -86,6 +89,9 @@ const Cursos = () => {
                       </div>
                     </div>
                   </Card.Text>
+                  <div className="d-flex justify-content-center">
+                    <ModalScalping />
+                  </div>
                 </div>
               </Card.Body>
             </Card>
@@ -148,6 +154,9 @@ const Cursos = () => {
                     </div>
                   </Card.Text>
                 </div>
+                <div className="d-flex justify-content-center">
+                  <ModalInver />
+                </div>
               </Card.Body>
             </Card>
           </Col>
@@ -203,6 +212,9 @@ const Cursos = () => {
                       </div>
                     </div>
                   </Card.Text>
+                </div>
+                <div className="d-flex  justify-content-center  ">
+                  <ModalTraderInver />
                 </div>
               </Card.Body>
             </Card>
