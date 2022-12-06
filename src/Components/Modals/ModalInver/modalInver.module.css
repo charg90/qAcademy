@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,400;1,500&display=swap");
+.modal {
+  z-index: 2000;
+  color: #00f0df;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+.modalHeader {
+  background-color: rgb(45, 4, 53) !important;
+  display: flex;
+  justify-content: center;
+}
+.modalBody {
+  background-color: rgb(45, 4, 53) !important;
+}
+.btnModal {
+  background-color: transparent;
+  border: #00f0df solid 3px;
+  color: #00f0df;
+  width: 130px;
+  height: 40px;
+  border-radius: 50px;
+}
+.btnVerMas {
+  background-color: transparent;
+  border: #00f0df solid 3px;
+  color: #00f0df;
+  width: 151px;
+  height: 50px;
+  border-radius: 50px;
+}
+.btnVerMas:hover {
+  transition: 0.5s;
+  background-color: #00f0df;
+  color: #000c24;
+}
+
+.modalFooter {
+  background-color: rgb(45, 4, 53) !important;
+}
