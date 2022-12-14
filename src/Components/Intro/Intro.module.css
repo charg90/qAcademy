@@ -11,13 +11,14 @@
   font-family: "Roboto", sans-serif;
 }
 .banner {
-  height: 35vh;
+  height: 40vh;
 }
 
 .profilePhoto {
-  height: 15rem;
-  width: 15rem;
+  height: 20rem;
+  width: 20rem;
   border: 6px;
+  object-position: center center;
 }
 .nombre {
   color: #fff;
