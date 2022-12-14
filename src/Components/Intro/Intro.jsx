@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./Intro.module.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import banner from "../../assets/Banner web (2)[2332].png";
+import banner from "../../assets/banner1.jpeg";
 import ArrowDown from "./../Commons/ArrowDown/ArrowDown";
-import FotoPerfil from "./../../assets/Foto Perfil.jpg";
+import FotoPerfil from "./../../assets/Perfil[2363]1.jpeg";
 import { motion } from "framer-motion";
 
 import { data, fullData } from "./../../helpers/data";
 import { useState } from "react";
+import ModalEbook from "../Modals/ModalEbook/ModalEbook";
 const Intro = () => {
   const [showMore, setShowMore] = useState(false);
   const info = data;
@@ -23,9 +24,14 @@ const Intro = () => {
       className={`${styles.container} min-vh-100 d-flex flex-column  justify-content-center`}
       id="intro"
     >
+      <ModalEbook />
       <Row className="d-flex justify-content-center">
         <Col className="p-0 d-flex justify-content-center">
-          <img src={banner} className={`${styles.banner} p-0 w-100 `}></img>
+          <img
+            src={banner}
+            className={`${styles.banner} p-0 w-100 `}
+            alt="banner-photo"
+          ></img>
         </Col>
       </Row>
       <Row className="d-flex justify-content-center align-items-center mt-5 mb-5 p-0 ">
@@ -38,12 +44,13 @@ const Intro = () => {
           <img
             src={FotoPerfil}
             className={`${styles.profilePhoto} rounded-circle `}
+            alt="profile-photo"
           />
 
           <p className={`${styles.nombre}`}>Damian Quiros</p>
-          <p className={`${styles.ceo} text-center`}>
+          <h1 className={`${styles.ceo} text-center`}>
             CEO Q | Capital-Stock Market Academy
-          </p>
+          </h1>
         </Col>
         <Col
           as={motion.div}
