@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Intro from "./Components/Intro/Intro";
 import Target from "./Components/Target/Target";
 import Alumnos from "./Components/Alumnos/Alumnos";
@@ -8,10 +8,11 @@ import Navbar from "./Components/Navbar/NavBar";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import "./app.css";
 import { Container } from "react-bootstrap";
+import ModalEbook from "./Components/Modals/ModalEbook/ModalEbook";
 function App() {
   return (
     <>
-      {" "}
+      <ModalEbook />
       <Container fluid className="bg p-0 ">
         <Navbar />
         <Intro />
