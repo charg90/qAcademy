@@ -11,12 +11,13 @@
   font-family: "Roboto", sans-serif;
 }
 .banner {
-  height: 40vh;
+  max-width: 1600px;
+  height: 30vh;
 }
 
 .profilePhoto {
-  height: 20rem;
-  width: 20rem;
+  height: 10rem;
+  width: 10rem;
   border: 6px;
   object-position: center center;
 }
@@ -40,4 +41,19 @@
   outline: none;
   font-family: "Montserrat";
   font-weight: 500;
+}
+
+@media (min-width: 900px) {
+  .banner {
+    height: 50vh;
+  }
+  .profilePhoto {
+    height: 40vh;
+    width: 40vh;
+  }
+}
+@media (min-width: 1200px) {
+  .banner {
+    height: 60vh;
+  }
 }

@@ -12,7 +12,7 @@ import ModalEbook from "./Components/Modals/ModalEbook/ModalEbook";
 function App() {
   return (
     <>
-      {" "}
+      <ModalEbook />
       <Container fluid className="bg p-0 ">
         <Navbar />
         <Intro />
