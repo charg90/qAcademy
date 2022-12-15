@@ -30,7 +30,7 @@ const ModalEbook = () => {
         <Modal.Body
           className={`${styles.modalBody} d-flex flex-column  justify-content-between   align-items-center `}
         >
-          <h2>No te vayas con las manos vacias</h2>
+          <h1>No te vayas con las manos vacias</h1>
           <p>
             Descargarlo gratis y empecemos con los primeros pasos en este
             emocionante mundo
