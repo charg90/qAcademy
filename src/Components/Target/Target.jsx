@@ -48,7 +48,11 @@ const Cursos = () => {
             lg={6}
             className="d-flex justify-content-center align-items-center"
           >
-            <img src={logo} className={`${styles.logo} img-fluid `} />
+            <img
+              src={logo}
+              className={`${styles.logo} img-fluid `}
+              alt="logo"
+            />
           </Col>
 
           <Col xs={12} md={12} lg={6} className={`d-flex `}>
