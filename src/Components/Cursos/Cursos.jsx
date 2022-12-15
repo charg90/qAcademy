@@ -59,6 +59,7 @@ const Cursos = () => {
                 <Card.Img
                   variant="top"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIeLLJAsGAECjOQytQ4qm0QNrJfaW58NyxCA&usqp=CAU"
+                  alt="trader"
                 />
                 <Card.Title className={`${styles.titleText} text-center`}>
                   Trader
@@ -114,7 +115,11 @@ const Cursos = () => {
               className={` ${styles.cardBody} p-4 h-100`}
             >
               <Card.Body className="d-flex flex-column d-flex justify-content-around">
-                <Card.Img variant="top" src={InversorBursatil} />
+                <Card.Img
+                  variant="top"
+                  src={InversorBursatil}
+                  alt="inversor bursatil"
+                />
                 <Card.Title className={`${styles.titleText} text-center`}>
                   Inversor Bursatil
                 </Card.Title>
@@ -178,7 +183,7 @@ const Cursos = () => {
               className={` ${styles.cardBody} p-4 h-100`}
             >
               <Card.Body className="d-flex flex-column d-flex justify-content-around">
-                <Card.Img variant="top" src={Combo} />
+                <Card.Img variant="top" src={Combo} alt="trader/bursatil" />
                 <Card.Title className={`${styles.titleText} text-center`}>
                   Combo: Trader/Inversor Bursatil
                 </Card.Title>
