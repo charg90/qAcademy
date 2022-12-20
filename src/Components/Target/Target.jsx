@@ -56,12 +56,13 @@ const Cursos = () => {
           </Col>
 
           <Col xs={12} md={12} lg={6} className={`d-flex `}>
-            <Row className={`d-flex justify-content-center w-100 mt-md-5 mt-5`}>
+            <Row className={` w-100 mt-md-5 mt-5`}>
               <Col
                 xs={12}
                 md={12}
                 lg={6}
-                className={` ${styles.texto} d-flex flex-column justify-content-center  mb-xss-4 `}
+                className={` ${styles.texto} d-flex flex-column justify-content-around  mb-xs-4 `}
+                style={{ marginBottom: "10px" }}
               >
                 <p className={` ${styles.textos} text-center`}>
                   Sin experiencia
@@ -75,7 +76,7 @@ const Cursos = () => {
                 >
                   <motion.div
                     variants={items}
-                    className="d-flex justify-content-center     "
+                    className="d-flex justify-content-center align-items-center    "
                   >
                     <div>
                       <TiTick
@@ -86,7 +87,7 @@ const Cursos = () => {
                     </div>
                     <p
                       variants={items}
-                      className={` ${styles.textoDescripcion}     `}
+                      className={` ${styles.textoDescripcion}  mb-2 d-flex align-items-center   `}
                     >
                       No es necesario que tengas experiencia previa
                     </p>
@@ -99,10 +100,12 @@ const Cursos = () => {
                       <TiTick
                         color=" FF0000"
                         size={40}
-                        className={`${styles.svgTarget}`}
+                        className={`${styles.svgTarget}  `}
                       />
                     </div>
-                    <p className={` ${styles.textoDescripcion}   `}>
+                    <p
+                      className={` ${styles.textoDescripcion} d-flex align-items-center  `}
+                    >
                       No necesitas ningun titulo de grado
                     </p>
                   </motion.div>
@@ -117,11 +120,11 @@ const Cursos = () => {
                         className={`${styles.svgTarget}`}
                       />
                     </div>
-                    <p className={` ${styles.textoDescripcion}  `}>
-                      Vas a comenzar de{" "}
-                      <span className={`${styles.spanTarget}`}>
-                        "Cero a Pro"
-                      </span>
+                    <p
+                      className={` ${styles.textoDescripcion} d-flex flex-column justify-content-center align-items-center  `}
+                    >
+                      Vas a comenzar de {"         "}
+                      "Cero a Pro"
                     </p>
                   </motion.div>
                 </motion.div>
@@ -144,7 +147,7 @@ const Cursos = () => {
                 >
                   <motion.div
                     variants={items}
-                    className={`${styles.textContainer} d-flex  justify-content-center  `}
+                    className={`${styles.textContainer} d-flex  justify-content-center align-items-center `}
                   >
                     <div>
                       <TiTick
@@ -153,7 +156,9 @@ const Cursos = () => {
                         className={`${styles.svgTarget}`}
                       />
                     </div>
-                    <p className={` ${styles.textoDescripcion}  mt-md-0  `}>
+                    <p
+                      className={` ${styles.textoDescripcion}  mb-0  d-flex align-items-center `}
+                    >
                       Mejoraras tu sistema de trading
                     </p>
                   </motion.div>
@@ -168,7 +173,9 @@ const Cursos = () => {
                         className={`${styles.svgTarget}`}
                       />
                     </div>
-                    <p className={` ${styles.textoDescripcion}  mt-md-0 `}>
+                    <p
+                      className={` ${styles.textoDescripcion} mb-0  mt-md-0 d-flex align-items-center `}
+                    >
                       Aprenderas nuevas herramientas de solucion de problemas
                     </p>
                   </motion.div>
@@ -184,7 +191,9 @@ const Cursos = () => {
                       />
                     </div>
 
-                    <p className={` ${styles.textoDescripcion} mb-0 `}>
+                    <p
+                      className={` ${styles.textoDescripcion} mb-0 d-flex align-items-center  `}
+                    >
                       Dominaras todos los mercados financieros como trader o
                       inversor
                     </p>

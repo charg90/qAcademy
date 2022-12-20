@@ -31,7 +31,7 @@
   font-size: 30px;
 }
 .spanTarget {
-  display: block;
+  display: inline;
 }
 .textoDescripcion {
   color: #00f0df;
@@ -70,6 +70,9 @@
   }
   .rowTarget {
     height: 100%;
+  }
+  .spanTarget {
+    display: inline;
   }
 }
 
