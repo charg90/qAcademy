@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Intro.module.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import banner from "../../assets/baner alta resolution papa![2365].jpeg";
+import banner from "../../assets/banner3.jpeg";
 import ArrowDown from "./../Commons/ArrowDown/ArrowDown";
 import FotoPerfil from "./../../assets/Perfil[2363]1.jpeg";
 import { motion } from "framer-motion";
