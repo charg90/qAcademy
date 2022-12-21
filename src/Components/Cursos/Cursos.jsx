@@ -74,19 +74,22 @@ const Cursos = () => {
                     <div className="mt-3">
                       <div className="d-flex   ">
                         <TiTick color=" FF0000" size={30} />
-                        <p className={`${styles.text} m-0 `}> Scalping</p>
+                        <div className={`${styles.text} m-0 `}> Scalping</div>
                       </div>
                       <div className="d-flex ">
                         <TiTick size={30} color=" FF0000" />
-                        <p className={`${styles.text} m-0`}> Swing Trading</p>
+                        <div className={`${styles.text} m-0`}>
+                          {" "}
+                          Swing Trading
+                        </div>
                       </div>
                       <div className="d-flex ">
                         <TiTick size={30} color=" FF0000" />
-                        <p className={`${styles.text} m-0`}> Day Trading</p>
+                        <div className={`${styles.text} m-0`}> Day Trading</div>
                       </div>
                       <div className="d-flex   ">
                         <TiTick color=" FF0000" size={30} />
-                        <p className={`${styles.text} m-0 `}> Investment</p>
+                        <div className={`${styles.text} m-0 `}> Investment</div>
                       </div>
                     </div>
                   </Card.Text>
@@ -133,28 +136,28 @@ const Cursos = () => {
                     <div className="mt-3">
                       <div className="d-flex   ">
                         <TiTick color=" FF0000" size={30} />
-                        <p className={`${styles.text} m-0 `}>
+                        <div className={`${styles.text} m-0 `}>
                           Activos Fijos y Variables
-                        </p>
+                        </div>
                       </div>
                       <div className="d-flex ">
                         <TiTick size={30} color=" FF0000" />
-                        <p className={`${styles.text} m-0`}>
+                        <div className={`${styles.text} m-0`}>
                           Analisis Fundamental
-                        </p>
+                        </div>
                       </div>
                       <div className="d-flex ">
                         <TiTick size={30} color=" FF0000" />
-                        <p className={`${styles.text} m-0`}>
+                        <div className={`${styles.text} m-0`}>
                           Armado de Carteras
-                        </p>
+                        </div>
                       </div>
                       <div className="d-flex   ">
                         <TiTick color=" FF0000" size={30} />
-                        <p className={`${styles.text} m-0 `}>
+                        <div className={`${styles.text} m-0 `}>
                           {" "}
                           Ingresos Pasivos
-                        </p>
+                        </div>
                       </div>
                     </div>
                   </Card.Text>
@@ -197,23 +200,23 @@ const Cursos = () => {
                     <div className="mt-3">
                       <div className="d-flex   ">
                         <TiTick color=" FF0000" size={30} />
-                        <p className={`${styles.text} m-0 `}>
+                        <div className={`${styles.text} m-0 `}>
                           Herramientas QRTI
-                        </p>
+                        </div>
                       </div>
                       <div className="d-flex ">
                         <TiTick size={30} color=" FF0000" />
-                        <p className={`${styles.text} m-0`}>Psicotrading</p>
+                        <div className={`${styles.text} m-0`}>Psicotrading</div>
                       </div>
                       <div className="d-flex ">
                         <TiTick size={30} color=" FF0000" />
-                        <p className={`${styles.text} m-0 w-100`}>
+                        <div className={`${styles.text} m-0 w-100`}>
                           Pymes en los Mercados
-                        </p>
+                        </div>
                       </div>
                       <div className="d-flex   ">
                         <TiTick color=" FF0000" size={30} />
-                        <p className={`${styles.text} m-0 `}>Cryptos</p>
+                        <div className={`${styles.text} m-0 `}>Cryptos</div>
                       </div>
                     </div>
                   </Card.Text>

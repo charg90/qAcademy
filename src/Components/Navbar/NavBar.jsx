@@ -14,7 +14,7 @@ const NavBar = () => {
       >
         <Container className="d-flex justify-content-center mr-5">
           <Navbar.Brand className={`${styles.links}`}>
-            <Link to="intro" smooth={true} offset={0} duration={500}>
+            <Link to="intro" smooth={true} offset={0} duration={500} hrfe="/">
               Q <span className={`${styles.bar}  `}>|</span> Capital Stock
               Market Academy
             </Link>
@@ -25,6 +25,7 @@ const NavBar = () => {
               <Nav.Link
                 className={`${styles.links}`}
                 style={{ textDecoration: "none !important" }}
+                hrfe="#"
               >
                 <Link
                   to="target"
@@ -32,39 +33,43 @@ const NavBar = () => {
                   offset={0}
                   duration={500}
                   style={{ textDecoration: "none" }}
+                  hrfe="#"
                 >
                   Para quien son nuestros Cursos ?
                 </Link>
               </Nav.Link>
-              <Nav.Link className={`${styles.links}`}>
+              <Nav.Link className={`${styles.links}`} hrfe="#">
                 <Link
                   to="aboutMe"
                   smooth={true}
                   offset={0}
                   duration={500}
                   style={{ textDecoration: "none" }}
+                  hrfe="#"
                 >
                   About Me
                 </Link>
               </Nav.Link>
-              <Nav.Link className={`${styles.links}`}>
+              <Nav.Link className={`${styles.links}`} hrfe="#">
                 <Link
                   to="cursos"
                   smooth={true}
                   offset={0}
                   duration={500}
                   style={{ textDecoration: "none" }}
+                  hrfe="#"
                 >
                   <div>Nuestros Cursos</div>
                 </Link>
               </Nav.Link>
-              <Nav.Link className={`${styles.links}`}>
+              <Nav.Link className={`${styles.links}`} hrfe="#">
                 <Link
                   to="contacto"
                   smooth={true}
                   offset={0}
                   duration={500}
                   style={{ textDecoration: "none" }}
+                  hrfe="#"
                 >
                   <div>Contacto</div>
                 </Link>
