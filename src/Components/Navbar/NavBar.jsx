@@ -14,7 +14,7 @@ const NavBar = () => {
       >
         <Container className="d-flex justify-content-center mr-5">
           <Navbar.Brand className={`${styles.links}`}>
-            <Link to="intro" smooth={true} offset={0} duration={500} hrfe="#">
+            <Link to="intro" smooth={true} offset={0} duration={500} hrfe="/">
               Q <span className={`${styles.bar}  `}>|</span> Capital Stock
               Market Academy
             </Link>
