@@ -4,7 +4,7 @@ import styles from "./buttons.module.css";
 const Buttons = ({ title, destination }) => {
   return (
     <Link to={destination}>
-      <button className={`${styles.btn} d-none`}>{title}</button>
+      <button className={`${styles.btn} `}>{title}</button>
     </Link>
   );
 };
