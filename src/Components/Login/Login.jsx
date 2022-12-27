@@ -7,17 +7,33 @@ import { loginWithEmail } from "../../FireBase/loginInWithEmail";
 import { loginWithFacebook } from "../../FireBase/loginWithFacebook";
 import { loginWithGoogle } from "../../FireBase/loginWithGoogle";
 import { useForm } from "react-hook-form";
+import { logIn } from "../../Store/Features/auth";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
-    loginWithEmail(data.email, data.password);
+
+  const onSubmit = async (data) => {
+    const response = await loginWithEmail(data.email, data.password);
+    dispatch(logIn(response));
+    navigate("/userHome");
+  };
+  const HandlerFacebook = async () => {
+    const data = await loginWithFacebook();
+    dispatch(logIn(data));
+    navigate("/userHome");
   };
 
+  const handlerGoogle = async () => {
+    const data = await loginWithGoogle();
+    dispatch(logIn(data));
+  };
   return (
     <>
       <h2>Iniciar Session</h2>
@@ -53,28 +69,28 @@ const Login = () => {
         <Button
           className={`${styles.btn}`}
           onClick={() => {
-            loginWithGoogle();
+            handlerGoogle();
           }}
         >
           <img
             src={googleIcon}
             alt="google-icon"
-            className={`${styles.svgGoogle}`}
+            className={`${styles.svgGoogle} mx-2`}
           />
           Iniciar con Google
         </Button>
         <Button
           className={`${styles.btn} `}
           onClick={() => {
-            loginWithFacebook();
+            HandlerFacebook();
           }}
         >
           <img
             src={FacebookIcon}
             alt="google-icon"
-            className={`${styles.svgGoogle} `}
+            className={`${styles.svgGoogle} mx-2 `}
           />
-          Registrar con Facebook
+          Inicar con Facebook
         </Button>
       </Row>
     </>

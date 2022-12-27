@@ -5,7 +5,7 @@ import { auth } from "./config";
 export const loginWithEmail = async (email, password) => {
   try {
     const response = await signInWithEmailAndPassword(auth, email, password);
-    console.log(response);
+    return response._tokenResponse;
   } catch (err) {
     console.log(err);
     Swal.fire({

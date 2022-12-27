@@ -5,9 +5,11 @@ const provider = new GoogleAuthProvider();
 
 export const loginWithGoogle = async () => {
   try {
-    const response = signInWithPopup(auth, provider);
+    const response = await signInWithPopup(auth, provider);
     const credential = GoogleAuthProvider.credentialFromResult(response);
-    const token = credential.accessToken;
-    console.log(token, response);
-  } catch (err) {}
+    console.log(response);
+    return response._tokenResponse;
+  } catch (err) {
+    console.log(err);
+  }
 };

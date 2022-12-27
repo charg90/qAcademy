@@ -10,23 +10,32 @@ import { registrationFacebook } from "../../FireBase/registrationFacebook";
 import { useNavigate } from "react-router-dom";
 import googleIcon from "./../../assets/google-icon.svg";
 import FacebookIcon from "./../../assets/facebook-svgrepo-com.svg";
+import { useDispatch } from "react-redux";
+import { logIn } from "../../Store/Features/auth";
 
 export const Registration = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const {
     register,
     handleSubmit,
-    watch,
+
     formState: { errors },
   } = useForm({
     resolver: yupResolver(RegistrationSchema),
   });
   const onSubmit = async (data) => {
-    await registrationWithEmail(data.email, data.password);
-    let authToken = sessionStorage.getItem("Auth Token");
-    if (authToken) {
-      navigate("/userHome");
-    }
+    const response = await registrationWithEmail(data.email, data.password);
+
+    dispatch(logIn(response));
+  };
+  const googleHandler = async () => {
+    const data = await signInWithPopupGoogle();
+    dispatch(logIn(data));
+  };
+  const facebookHandler = async () => {
+    const data = await registrationFacebook();
+    dispatch(logIn(data));
   };
 
   return (
@@ -87,25 +96,19 @@ export const Registration = () => {
         </Button>
       </Form>
       <Row className="d-grid gap-2 mt-2 justify-content-center">
-        <Button
-          className={`${styles.btn}`}
-          onClick={() => signInWithPopupGoogle()}
-        >
+        <Button className={`${styles.btn}`} onClick={() => googleHandler()}>
           <img
             src={googleIcon}
             alt="google-icon"
-            className={`${styles.svgGoogle}`}
+            className={`${styles.svgGoogle} mx-2`}
           />
           Registrar con Google
         </Button>
-        <Button
-          className={`${styles.btn} `}
-          onClick={() => registrationFacebook()}
-        >
+        <Button className={`${styles.btn} `} onClick={() => facebookHandler()}>
           <img
             src={FacebookIcon}
             alt="google-icon"
-            className={`${styles.svgGoogle} `}
+            className={`${styles.svgGoogle} mx-2`}
           />
           Registrar con Facebook
         </Button>
