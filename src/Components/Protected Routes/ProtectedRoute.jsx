@@ -1,13 +1,12 @@
 import { useSelector } from "react-redux";
 import { Navigate, Outlet } from "react-router-dom";
-const ProtectedRoutes = () => {
+const ProtectedRoutes = ({ children }) => {
   const auth = useSelector((state) => state.auth.accessToken);
 
   if (auth === null) {
     return <Navigate to={"/cuentas"} replace />;
-  } else {
-    <Outlet />;
   }
+  return children;
 };
 
 export default ProtectedRoutes;
