@@ -9,8 +9,10 @@ import { loginWithGoogle } from "../../FireBase/loginWithGoogle";
 import { useForm } from "react-hook-form";
 import { logIn } from "../../Store/Features/auth";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -20,10 +22,12 @@ const Login = () => {
   const onSubmit = async (data) => {
     const response = await loginWithEmail(data.email, data.password);
     dispatch(logIn(response));
+    navigate("/userHome");
   };
   const HandlerFacebook = async () => {
     const data = await loginWithFacebook();
     dispatch(logIn(data));
+    navigate("/userHome");
   };
 
   const handlerGoogle = async () => {
@@ -71,7 +75,7 @@ const Login = () => {
           <img
             src={googleIcon}
             alt="google-icon"
-            className={`${styles.svgGoogle}`}
+            className={`${styles.svgGoogle} mx-2`}
           />
           Iniciar con Google
         </Button>
@@ -84,9 +88,9 @@ const Login = () => {
           <img
             src={FacebookIcon}
             alt="google-icon"
-            className={`${styles.svgGoogle} `}
+            className={`${styles.svgGoogle} mx-2 `}
           />
-          Registrar con Facebook
+          Inicar con Facebook
         </Button>
       </Row>
     </>

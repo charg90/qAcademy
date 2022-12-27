@@ -100,7 +100,7 @@ export const Registration = () => {
           <img
             src={googleIcon}
             alt="google-icon"
-            className={`${styles.svgGoogle}`}
+            className={`${styles.svgGoogle} mx-2`}
           />
           Registrar con Google
         </Button>
@@ -108,7 +108,7 @@ export const Registration = () => {
           <img
             src={FacebookIcon}
             alt="google-icon"
-            className={`${styles.svgGoogle} `}
+            className={`${styles.svgGoogle} mx-2`}
           />
           Registrar con Facebook
         </Button>
