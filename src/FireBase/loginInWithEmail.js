@@ -1,0 +1,17 @@
+import { signInWithEmailAndPassword } from "firebase/auth";
+import Swal from "sweetalert2";
+import { auth } from "./config";
+
+export const loginWithEmail = async (email, password) => {
+  try {
+    const response = await signInWithEmailAndPassword(auth, email, password);
+    return response._tokenResponse;
+  } catch (err) {
+    console.log(err);
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Contraseña o mail incorrectos ",
+    });
+  }
+};

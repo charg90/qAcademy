@@ -4,17 +4,18 @@ import { Link } from "react-scroll";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import styles from "./navBar.module.css";
+import Buttons from "../Buttons/Buttons";
 
 const NavBar = () => {
   return (
-    <div className={`${styles.wrapper} d-flex justify-content-center w-100 `}>
+    <div className={`${styles.wrapper} w-100 `}>
       <Navbar
         expand="lg"
         className={`${styles.nav} navbar-dark  d-flex justify-content-center   `}
       >
         <Container className="d-flex justify-content-center mr-5">
           <Navbar.Brand className={`${styles.links}`}>
-            <Link to="intro" smooth={true} offset={0} duration={500} hrfe="/">
+            <Link to="/intro" smooth={true} offset={0} duration={500} hrfe="/">
               Q <span className={`${styles.bar}  `}>|</span> Capital Stock
               Market Academy
             </Link>
@@ -25,7 +26,6 @@ const NavBar = () => {
               <Nav.Link
                 className={`${styles.links}`}
                 style={{ textDecoration: "none !important" }}
-                hrfe="#"
               >
                 <Link
                   to="target"
@@ -33,7 +33,7 @@ const NavBar = () => {
                   offset={0}
                   duration={500}
                   style={{ textDecoration: "none" }}
-                  hrfe="#"
+                  hrfe="/target"
                 >
                   Para quien son nuestros Cursos ?
                 </Link>
@@ -45,7 +45,7 @@ const NavBar = () => {
                   offset={0}
                   duration={500}
                   style={{ textDecoration: "none" }}
-                  hrfe="#"
+                  hrfe="/aboutMe"
                 >
                   About Me
                 </Link>
@@ -57,7 +57,7 @@ const NavBar = () => {
                   offset={0}
                   duration={500}
                   style={{ textDecoration: "none" }}
-                  hrfe="#"
+                  hrfe="/cursos"
                 >
                   <div>Nuestros Cursos</div>
                 </Link>
@@ -69,12 +69,13 @@ const NavBar = () => {
                   offset={0}
                   duration={500}
                   style={{ textDecoration: "none" }}
-                  hrfe="#"
+                  hrfe="/contacto"
                 >
                   <div>Contacto</div>
                 </Link>
               </Nav.Link>
             </Nav>
+            <Buttons title="Cuenta" destination="cuentas" />
           </Navbar.Collapse>
         </Container>
       </Navbar>

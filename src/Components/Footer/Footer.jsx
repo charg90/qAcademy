@@ -6,7 +6,7 @@ import styles from "./footer.module.css";
 
 const Footer = () => {
   return (
-    <Container fluid className={`${styles.container}   `}>
+    <Container fluid className={`${styles.container} mt-auto    `}>
       <Row>
         <Col className="d-flex justify-content-center">
           <p>Copyright © 2022 Q Academy</p>
