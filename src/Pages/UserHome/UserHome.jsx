@@ -11,7 +11,7 @@ const UserHome = () => {
       <h1>hola{user.displayName}</h1>
       <p>{user.email}</p>
       <img src={user.photoURL} />
-      <p>{user.uid}</p>
+      <p>{user.uid} </p>
     </>
   );
 };
