@@ -28,14 +28,17 @@ export const Registration = () => {
     const response = await registrationWithEmail(data.email, data.password);
 
     dispatch(logIn(response));
+    navigate("/userHome");
   };
   const googleHandler = async () => {
     const data = await signInWithPopupGoogle();
     dispatch(logIn(data));
+    navigate("/userHome");
   };
   const facebookHandler = async () => {
     const data = await registrationFacebook();
     dispatch(logIn(data));
+    navigate("/userHome");
   };
 
   return (
