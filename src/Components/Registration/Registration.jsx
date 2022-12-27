@@ -4,7 +4,7 @@ import styles from "./registration.module.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { RegistrationSchema } from "../Schemas/RegistrationSchema";
-import { registrationWithEmail } from "../../FireBase/RegistrationWithEmail";
+// import { registrationWithEmail } from "../../FireBase/RegistrationWithEmail";
 import { signInWithPopupGoogle } from "../../FireBase/registrationGoogle";
 import { registrationFacebook } from "../../FireBase/registrationFacebook";
 import { useNavigate } from "react-router-dom";
@@ -25,7 +25,7 @@ export const Registration = () => {
     resolver: yupResolver(RegistrationSchema),
   });
   const onSubmit = async (data) => {
-    const response = await registrationWithEmail(data.email, data.password);
+    // const response = await registrationWithEmail(data.email, data.password);
     dispatch(logIn(response));
     navigate("/userHome");
   };
