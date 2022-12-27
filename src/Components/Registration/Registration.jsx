@@ -26,8 +26,8 @@ export const Registration = () => {
   });
   const onSubmit = async (data) => {
     // const response = await registrationWithEmail(data.email, data.password);
-    // dispatch(logIn(response));
-    // navigate("/userHome");
+    dispatch(logIn(response));
+    navigate("/userHome");
   };
   const googleHandler = async () => {
     const data = await signInWithPopupGoogle();
