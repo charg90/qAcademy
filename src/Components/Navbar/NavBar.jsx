@@ -4,17 +4,18 @@ import { Link } from "react-scroll";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import styles from "./navBar.module.css";
+import Buttons from "../Buttons/Buttons";
 
 const NavBar = () => {
   return (
-    <div className={`${styles.wrapper} d-flex justify-content-center w-100 `}>
+    <div className={`${styles.wrapper} w-100 `}>
       <Navbar
         expand="lg"
         className={`${styles.nav} navbar-dark  d-flex justify-content-center   `}
       >
         <Container className="d-flex justify-content-center mr-5">
           <Navbar.Brand className={`${styles.links}`}>
-            <Link to="intro" smooth={true} offset={0} duration={500}>
+            <Link to="/intro" smooth={true} offset={0} duration={500} hrfe="/">
               Q <span className={`${styles.bar}  `}>|</span> Capital Stock
               Market Academy
             </Link>
@@ -32,44 +33,49 @@ const NavBar = () => {
                   offset={0}
                   duration={500}
                   style={{ textDecoration: "none" }}
+                  hrfe="/target"
                 >
                   Para quien son nuestros Cursos ?
                 </Link>
               </Nav.Link>
-              <Nav.Link className={`${styles.links}`}>
+              <Nav.Link className={`${styles.links}`} hrfe="#">
                 <Link
                   to="aboutMe"
                   smooth={true}
                   offset={0}
                   duration={500}
                   style={{ textDecoration: "none" }}
+                  hrfe="/aboutMe"
                 >
                   About Me
                 </Link>
               </Nav.Link>
-              <Nav.Link className={`${styles.links}`}>
+              <Nav.Link className={`${styles.links}`} hrfe="#">
                 <Link
                   to="cursos"
                   smooth={true}
                   offset={0}
                   duration={500}
                   style={{ textDecoration: "none" }}
+                  hrfe="/cursos"
                 >
                   <div>Nuestros Cursos</div>
                 </Link>
               </Nav.Link>
-              <Nav.Link className={`${styles.links}`}>
+              <Nav.Link className={`${styles.links}`} hrfe="#">
                 <Link
                   to="contacto"
                   smooth={true}
                   offset={0}
                   duration={500}
                   style={{ textDecoration: "none" }}
+                  hrfe="/contacto"
                 >
                   <div>Contacto</div>
                 </Link>
               </Nav.Link>
             </Nav>
+            <Buttons title="Cuenta" destination="cuentas" />
           </Navbar.Collapse>
         </Container>
       </Navbar>

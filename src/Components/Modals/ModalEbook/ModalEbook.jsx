@@ -12,8 +12,8 @@ const ModalEbook = () => {
   useEffect(() => {
     setTimeout(() => {
       setShow(true);
-    });
-  }, "10");
+    }, "100");
+  }, []);
   return (
     <>
       <Modal
@@ -29,7 +29,11 @@ const ModalEbook = () => {
         </Modal.Header>
         <Row>
           <Col xs={12} sm={12} md={6} className="pe-xs-4 pe-sm-0">
-            <img src={photoBook} style={{ width: "100%", height: "100%" }} />
+            <img
+              src={photoBook}
+              style={{ width: "100%", height: "100%" }}
+              alt="ebook-photo"
+            />
           </Col>
           <Col xs={12} sm={12} md={6} className=" ps-sm-0">
             <Modal.Body

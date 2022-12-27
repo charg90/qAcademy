@@ -18,9 +18,9 @@ const Alumnos = () => {
             src="https://res.cloudinary.com/dnxh0fyqg/video/upload/v1668633744/Trading_-_Inversiones_Burs%C3%A1tiles_Q___Capital_-Stock_Market_Academy_Viv%C3%AD_algo_DIFERENTE_ufkkrm.mp4"
             width="100%"
             height="100%"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
             controls
           >
             <source
@@ -37,9 +37,9 @@ const Alumnos = () => {
               className="embed-responsive-item  w-100"
               src="https://res.cloudinary.com/dnxh0fyqg/video/upload/v1668636414/TIPS_para_ser_TRADER_o_INVERSOR._Te_cuento_lo_que_Necesitas_para_Arrancar_lhdf3u.mp4"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
               controls
             ></video>
           </Col>
@@ -50,9 +50,9 @@ const Alumnos = () => {
               className="embed-responsive-item  w-100"
               src="https://res.cloudinary.com/dnxh0fyqg/video/upload/v1668634804/Como__GANE_202_DOLARES__en_60_Segundos_-_Scalping_en_menos_de_10_minutos_de_mercado_dodkcu.mp4"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
               controls
             ></video>
           </Col>
