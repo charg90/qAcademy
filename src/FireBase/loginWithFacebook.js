@@ -7,8 +7,8 @@ export const loginWithFacebook = async () => {
   try {
     const response = await signInWithPopup(auth, provider);
     const credentials = FacebookAuthProvider.credentialFromResult(response);
-    const accessToken = credentials.accessToken;
-    console.log(response, accessToken);
+    console.log(response);
+    return response._tokenResponse;
   } catch (err) {
     console.log(err);
   }

@@ -10,6 +10,7 @@ export const signInWithPopupGoogle = async () => {
     sessionStorage.setItem("Auth Token", result._tokenResponse.refreshToken);
     console.log(result);
     createUserDb(result);
+    return result._tokenResponse;
   } catch (err) {
     Swal.fire({
       icon: "error",

@@ -10,9 +10,9 @@ export const registrationWithEmail = async (email, password) => {
       email,
       password
     );
-    sessionStorage.setItem("Auth Token", response._tokenResponse.refreshToken);
 
     createUserDb(response);
+    return response._tokenResponse;
   } catch (er) {
     console.log(er.message);
     Swal.fire({

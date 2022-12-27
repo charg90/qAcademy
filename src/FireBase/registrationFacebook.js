@@ -10,6 +10,7 @@ export const registrationFacebook = async () => {
     const result = await signInWithPopup(auth, provider);
     sessionStorage.setItem("Auth Token", result._tokenResponse.refreshToken);
     createUserDb(result);
+    return result._tokenResponse;
   } catch (err) {
     console.log(err);
     Swal.fire({
