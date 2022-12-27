@@ -33,6 +33,7 @@ const Login = () => {
   const handlerGoogle = async () => {
     const data = await loginWithGoogle();
     dispatch(logIn(data));
+    navigate("/userHome");
   };
   return (
     <>
