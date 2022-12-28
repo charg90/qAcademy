@@ -1,10 +1,11 @@
 import React from "react";
-import { Col, Row, Container } from "react-bootstrap";
+import { Col, Row, Container, Button } from "react-bootstrap";
 import { Link } from "react-scroll";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import styles from "./navBar.module.css";
 import Buttons from "../Buttons/Buttons";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -75,6 +76,26 @@ const NavBar = () => {
                 </Link>
               </Nav.Link>
             </Nav>
+            <button
+              className={`${styles.links}`}
+              style={{
+                backgroundColor: "transparent",
+                border: "#00f0df solid 3px",
+                color: "#00f0df",
+
+                height: "40px",
+                borderRadius: "50px",
+              }}
+            >
+              <a
+                target="blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScb1MfgLI9Hcb_keEwvnNT8HMEQOY7YLhsDxqqTcsK1J8pMyw/viewform?usp=sf_link"
+                style={{ textDecoration: "none", color: "#00f0df" }}
+              >
+                INSCRIPCION SUMMER TRADE
+              </a>
+            </button>
+
             <Buttons title="Cuenta" destination="cuentas" />
           </Navbar.Collapse>
         </Container>
