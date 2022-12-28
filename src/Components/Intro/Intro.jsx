@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Intro.module.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import banner from "../../assets/banner3.jpeg";
+import banner from "../../assets/banner5.jpeg";
 import ArrowDown from "./../Commons/ArrowDown/ArrowDown";
 import FotoPerfil from "./../../assets/Perfil[2363]1.jpeg";
 import { motion } from "framer-motion";
@@ -30,7 +30,7 @@ const Intro = () => {
           <Col className="p-0 d-flex justify-content-center">
             <img
               src={banner}
-              className={`${styles.banner} p-0 w-100 `}
+              className={`${styles.banner} p-0 w-100`}
               alt="banner-photo"
             ></img>
           </Col>

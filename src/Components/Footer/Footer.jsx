@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <Container fluid className={`${styles.container} mt-auto    `}>
       <Row>
-        <Col className="d-flex justify-content-center">
+        <Col className="d-flex justify-content-center mt-auto">
           <p>Copyright © 2022 Q Academy</p>
         </Col>
         <Col className="d-flex justify-content-center gap-2 ">

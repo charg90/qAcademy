@@ -12,6 +12,7 @@
     "@emailjs/browser": "^3.10.0",
     "@hookform/resolvers": "^2.9.10",
     "@reduxjs/toolkit": "^1.9.1",
+    "@widgetbot/react-embed": "^1.6.1",
     "bootstrap": "^5.2.0",
     "firebase": "^9.15.0",
     "framer-motion": "^7.3.2",
