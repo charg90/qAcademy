@@ -3,7 +3,7 @@ import LayoutPublic from "../Layout/LayoutPublic";
 import Home from "../Pages/Home/Home";
 import UserHome from "../Pages/UserHome/UserHome";
 import LoginRegistration from "../Pages/LoginRegistration/LoginRegistration";
-import ProtectedRoutes from "../Components/Protected Routes/protectedRoute";
+import ProtectedRoutes from "./../Components/Protected Routes/ProtectedRoute";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
     path: "/userHome",
     element: (
       <ProtectedRoutes>
-        <UserHome />
+        <UserHome />,
       </ProtectedRoutes>
     ),
   },
