@@ -4,11 +4,10 @@ import Target from "../../Components/Target/Target";
 import NavBar from "../../Components/Navbar/NavBar";
 import Alumnos from "../../Components/Alumnos/Alumnos";
 import ContactUs from "../../Components/ContactUs/ContactUs";
-import Footer from "../../Components/Footer/Footer";
+
 import Intro from "../../Components/Intro/Intro";
 import ModalEbook from "../../Components/Modals/ModalEbook/ModalEbook";
-import Cursos from "../../Components/Target/Target";
-
+import Cursos from "../../Components/Cursos/Cursos";
 const Home = () => {
   return (
     <>
