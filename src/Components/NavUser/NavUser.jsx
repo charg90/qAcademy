@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import styles from "./navBar.module.css";
 
 const NavUser = () => {
-  const { name } = useSelector((state) => state.auth);
+  const { name } = useSelector((state) => state.auth.auth);
   return (
     <div className={`${styles.wrapper} w-100 d-flex `}>
       <Navbar
