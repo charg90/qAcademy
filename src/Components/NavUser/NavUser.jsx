@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Dropdown, Nav, Navbar } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styles from "./navBar.module.css";
@@ -36,9 +36,24 @@ const NavUser = () => {
                 Mis Cursos
               </Nav.Link>
             </Nav>
-            <div className="w-75 d-flex justify-content-end p-4  align-items-center">
-              <p className="text-danger m-0"> Hola {name}</p>
-            </div>
+            <Dropdown>
+              <Dropdown.Toggle
+                id="dropdownUserHomer"
+                className={styles.dropdownUser}
+              >
+                Hola {name}
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item
+                  onClick={() => {
+                    console.log("hola");
+                  }}
+                >
+                  Log Out
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Navbar.Collapse>
         </Container>
       </Navbar>

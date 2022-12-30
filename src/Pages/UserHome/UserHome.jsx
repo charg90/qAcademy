@@ -9,6 +9,13 @@ const UserHome = () => {
   return (
     <>
       <div className={`${styles.container} mt-2`}>
+        <div className={`${styles.announce}`}>
+          <p>
+            Para poder hacer chatear en nuestro chat hace click en el mismo
+            logeate en Discord y ya vas poder chatear y recibir las ultimas
+            novedades del mercado
+          </p>
+        </div>
         <div className={`${styles.containerWidgetBot}`}>
           <WidgetBot
             server="1039614936428580935"
