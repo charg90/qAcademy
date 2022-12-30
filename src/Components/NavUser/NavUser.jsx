@@ -1,10 +1,18 @@
-import React from "react";
-import { Container, Dropdown, Nav, Navbar } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { onAuthStateChanged } from "@firebase/auth";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Container, Dropdown, Nav, Navbar } from "react-bootstrap";
+import { useSelector, useDispatch } from "react-redux";
+import { auth } from "../../FireBase/config";
+import { logOut } from "../../Store/Features/auth";
 import styles from "./navBar.module.css";
 
 const NavUser = () => {
+  const [uid, setUid] = useState();
+  onAuthStateChanged(auth, (currentUser) => {
+    setUid(currentUser.uid);
+  });
+  const dispatch = useDispatch();
   const { name } = useSelector((state) => state.auth.auth);
   return (
     <div className={`${styles.wrapper} w-100 d-flex `}>
@@ -34,8 +42,14 @@ const NavUser = () => {
                 style={{ textDecoration: "none" }}
               >
                 Mis Cursos
-              </Nav.Link>
+              </Nav.Link>{" "}
+              {uid == import.meta.env.VITE_ADMIN && (
+                <Link to="admin" className={`${styles.links}`}>
+                  Admin
+                </Link>
+              )}
             </Nav>
+
             <Dropdown>
               <Dropdown.Toggle
                 id="dropdownUserHomer"
@@ -47,7 +61,7 @@ const NavUser = () => {
               <Dropdown.Menu>
                 <Dropdown.Item
                   onClick={() => {
-                    console.log("hola");
+                    dispatch(logOut());
                   }}
                 >
                   Log Out

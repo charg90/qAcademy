@@ -5,6 +5,7 @@ import Home from "../Pages/Home/Home";
 import UserHome from "../Pages/UserHome/UserHome";
 import LoginRegistration from "../Pages/LoginRegistration/LoginRegistration";
 import ProtectedRoutes from "./../Components/Protected Routes/ProtectedRoute";
+import Admin from "../Components/Admin/Admin";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +32,11 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <UserHome />,
+      },
+
+      {
+        path: "admin",
+        element: <Admin />,
       },
     ],
   },

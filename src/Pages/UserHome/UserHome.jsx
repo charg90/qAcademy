@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../FireBase/config";
 import WidgetBot from "@widgetbot/react-embed";
 import styles from "./userHome.module.css";
+
 const UserHome = () => {
-  const [user, setUser] = useState({});
   onAuthStateChanged(auth, (currentUser) => {});
   return (
     <>
@@ -18,8 +18,8 @@ const UserHome = () => {
         </div>
         <div className={`${styles.containerWidgetBot}`}>
           <WidgetBot
-            server="1039614936428580935"
-            channel="1039614936428580944"
+            server="1036420999844999210"
+            channel="1036421000402829314"
             className={`${styles.WidgetBot}`}
           />
         </div>
