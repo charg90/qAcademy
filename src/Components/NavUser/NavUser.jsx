@@ -1,6 +1,6 @@
 import { onAuthStateChanged } from "@firebase/auth";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Container, Dropdown, Nav, Navbar } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { auth } from "../../FireBase/config";
@@ -21,28 +21,30 @@ const NavUser = () => {
         className={`${styles.nav} navbar-dark  d-flex justify-content-center w-100  `}
       >
         <Container className="d-flex justify-content-center mr-5">
-          <Navbar.Brand className={`${styles.links}`}>
-            Q <span className={`${styles.bar}  `}>|</span> Capital Stock Market
-            Academy
-          </Navbar.Brand>
+          <NavLink className={`${styles.links}`} to="/userHome">
+            <Navbar.Brand>
+              Q <span className={`${styles.bar}  `}>|</span> Capital Stock
+              Market Academy
+            </Navbar.Brand>
+          </NavLink>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto d-flex ">
-              <Nav.Link
+              <NavLink
                 className={`${styles.links}`}
-                hrfe="#"
+                to=""
                 style={{ textDecoration: "none" }}
               >
                 Cursos
-              </Nav.Link>
-              <Nav.Link
+              </NavLink>
+              <NavLink
                 className={`${styles.links}`}
                 hrfe="#"
                 to="contacto"
                 style={{ textDecoration: "none" }}
               >
                 Mis Cursos
-              </Nav.Link>{" "}
+              </NavLink>
               {uid == import.meta.env.VITE_ADMIN && (
                 <Link to="admin" className={`${styles.links}`}>
                   Admin
