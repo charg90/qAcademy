@@ -6,6 +6,7 @@ import Spinners from "../Commons/Spinner/Spinners";
 import styles from "./admin.module.css";
 import activateCoures from "../../FireBase/activatedCourse";
 import Spinner from "react-bootstrap/Spinner";
+import { ButtonUpdate } from "../Buttons/ButtonUpdate";
 
 const Admin = () => {
   const [users, setUser] = useState([]);
@@ -57,7 +58,8 @@ const Admin = () => {
                 <td>{user.email}</td>
                 <td>{user.uid}</td>
                 <td>
-                  <Button
+                  <ButtonUpdate user={user} course="trader" setUser={setUser} />
+                  {/* <Button
                     variant={!user.trader ? "danger" : "success"}
                     name="trader"
                     onClick={async (e) => {
@@ -79,10 +81,15 @@ const Admin = () => {
                         aria-hidden="true"
                       />
                     )}
-                  </Button>
+                  </Button> */}
                 </td>
                 <td>
-                  <Button
+                  <ButtonUpdate
+                    user={user}
+                    course="inverBur"
+                    setUser={setUser}
+                  />
+                  {/* <Button
                     variant={!user.inverBur ? "danger" : "success"}
                     className="text-center w-100 "
                     name="inverBur"
@@ -91,10 +98,11 @@ const Admin = () => {
                     }}
                   >
                     {!user.inverBur ? "inactivo" : "activo"}
-                  </Button>
+                  </Button> */}
                 </td>
                 <td>
-                  <Button
+                  <ButtonUpdate user={user} course="combo" setUser={setUser} />
+                  {/* <Button
                     variant={!user.combo ? "danger" : "success"}
                     name="combo"
                     onClick={(e) => {
@@ -102,7 +110,7 @@ const Admin = () => {
                     }}
                   >
                     {!user.combo ? "inactivo" : "activo"}
-                  </Button>
+                  </Button> */}
                 </td>
               </tr>
             ))}

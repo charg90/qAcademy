@@ -3,20 +3,19 @@ import { doc, updateDoc, getDoc } from "firebase/firestore";
 
 const activateCoures = (user, curso) => {
   const { trader, inverBur, combo } = user;
+
   const userRef = doc(db, "usuarios", user.uid);
-  console.log(user, trader);
 
   try {
     switch (curso) {
       case "trader":
-        return updateUser(userRef, trader);
+        return updateUserTrader(userRef, trader);
 
       case "inverBur": {
-        console.log("inverBur");
-        break;
+        return updateUserinvBur(userRef, inverBur);
       }
       case "combo": {
-        console.log("combo");
+        return updateUserCombo(userRef, combo);
       }
     }
   } catch (err) {
@@ -24,12 +23,37 @@ const activateCoures = (user, curso) => {
   }
 };
 
-const updateUser = async (userRef, trader) => {
+const updateUserTrader = async (userRef, trader) => {
   try {
     const response = await updateDoc(userRef, {
       trader: !trader,
     });
     const document = await getDoc(userRef);
+
+    return document.data();
+  } catch (err) {
+    console.log(err);
+  }
+};
+const updateUserinvBur = async (userRef, inverBur) => {
+  try {
+    const response = await updateDoc(userRef, {
+      inverBur: !inverBur,
+    });
+    const document = await getDoc(userRef);
+
+    return document.data();
+  } catch (err) {
+    console.log(err);
+  }
+};
+const updateUserCombo = async (userRef, combo) => {
+  try {
+    const response = await updateDoc(userRef, {
+      combo: !combo,
+    });
+    const document = await getDoc(userRef);
+
     return document.data();
   } catch (err) {
     console.log(err);
