@@ -59,58 +59,16 @@ const Admin = () => {
                 <td>{user.uid}</td>
                 <td>
                   <ButtonUpdate user={user} course="trader" setUser={setUser} />
-                  {/* <Button
-                    variant={!user.trader ? "danger" : "success"}
-                    name="trader"
-                    onClick={async (e) => {
-                      await handlerUpdate(user, e.target.name);
-                    }}
-                  >
-                    {!buttonLoading ? (
-                      !user.trader ? (
-                        "inactivo"
-                      ) : (
-                        "activo"
-                      )
-                    ) : (
-                      <Spinner
-                        as="span"
-                        animation="border"
-                        size="sm"
-                        role="status"
-                        aria-hidden="true"
-                      />
-                    )}
-                  </Button> */}
                 </td>
-                <td>
+                <td className="d-flex justify-content-center">
                   <ButtonUpdate
                     user={user}
                     course="inverBur"
                     setUser={setUser}
                   />
-                  {/* <Button
-                    variant={!user.inverBur ? "danger" : "success"}
-                    className="text-center w-100 "
-                    name="inverBur"
-                    onClick={(e) => {
-                      activateCoures(user, e.target.name);
-                    }}
-                  >
-                    {!user.inverBur ? "inactivo" : "activo"}
-                  </Button> */}
                 </td>
                 <td>
                   <ButtonUpdate user={user} course="combo" setUser={setUser} />
-                  {/* <Button
-                    variant={!user.combo ? "danger" : "success"}
-                    name="combo"
-                    onClick={(e) => {
-                      activateCoures(user, e.target.name);
-                    }}
-                  >
-                    {!user.combo ? "inactivo" : "activo"}
-                  </Button> */}
                 </td>
               </tr>
             ))}
