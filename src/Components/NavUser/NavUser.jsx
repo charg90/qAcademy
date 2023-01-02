@@ -45,11 +45,12 @@ const NavUser = () => {
               >
                 Mis Cursos
               </NavLink>
-              {uid == import.meta.env.VITE_ADMIN && (
-                <Link to="admin" className={`${styles.links}`}>
-                  Admin
-                </Link>
-              )}
+              {uid == import.meta.env.VITE_ADMIN ||
+                (import.meta.env.VITE_ADMIN2 && (
+                  <Link to="admin" className={`${styles.links}`}>
+                    Admin
+                  </Link>
+                ))}
             </Nav>
 
             <Dropdown>
