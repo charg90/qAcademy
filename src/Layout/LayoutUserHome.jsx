@@ -6,9 +6,12 @@ import NavUser from "../Components/NavUser/NavUser";
 
 const LayoutUserHome = () => {
   return (
-    <Container fluid className="d-flex flex-column min-vh-100 mt-0 p-0 ">
+    <Container
+      fluid
+      className={`bg-dark d-flex flex-column min-vh-100 mt-0 p-0 align-items-center justify-content-center`}
+    >
       <NavUser />
-      <main>
+      <main className="mt-4">
         <Outlet />
       </main>
       <Footer />

@@ -17,9 +17,15 @@ export const authSlice = createSlice({
       state.email = payload.email;
       state.uid = payload.uid;
     },
+    logOut: (state) => {
+      state.accessToken = null;
+      state.name = null;
+      state.email = null;
+      state.uid = null;
+    },
   },
 });
 
-export const { logIn } = authSlice.actions;
+export const { logIn, logOut } = authSlice.actions;
 
 export default authSlice.reducer;

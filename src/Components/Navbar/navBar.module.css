@@ -15,8 +15,13 @@
 
 .links {
   text-decoration: none !important;
+  font-size: 14px !important;
 }
 .links :visited {
   background-color: pink;
   text-decoration: none;
+}
+.buttonsContainer {
+  gap: 10px;
+  display: flex;
 }
