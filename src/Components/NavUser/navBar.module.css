@@ -15,8 +15,17 @@
 
 .links {
   text-decoration: none !important;
+  padding: 4px;
+  color: rgba(255, 255, 255, 0.55);
 }
 .links :visited {
   background-color: pink;
   text-decoration: none;
+}
+
+.dropdownUser {
+  background-color: #00f0df !important;
+  color: #000c24 !important;
+  outline: none !important;
+  border: none !important;
 }
