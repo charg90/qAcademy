@@ -12,7 +12,7 @@ const NavBar = () => {
     <div className={`${styles.wrapper} w-100 `}>
       <Navbar
         expand="lg"
-        className={`${styles.nav} navbar-dark  d-flex justify-content-center   `}
+        className={`${styles.nav} navbar-dark  d-flex justify-content-between  w-100  `}
       >
         <Container className="d-flex justify-content-center mr-5">
           <Navbar.Brand className={`${styles.links}`}>
@@ -76,27 +76,29 @@ const NavBar = () => {
                 </Link>
               </Nav.Link>
             </Nav>
-            <button
-              className={`${styles.links}`}
-              style={{
-                backgroundColor: "transparent",
-                border: "#00f0df solid 3px",
-                color: "#00f0df",
+            <div className={`${styles.buttonsContainer}`}>
+              <button
+                className={`${styles.links}`}
+                style={{
+                  backgroundColor: "transparent",
+                  border: "#00f0df solid 3px",
+                  color: "#00f0df",
 
-                height: "40px",
-                borderRadius: "50px",
-              }}
-            >
-              <a
-                target="blank"
-                href="https://docs.google.com/forms/d/e/1FAIpQLScb1MfgLI9Hcb_keEwvnNT8HMEQOY7YLhsDxqqTcsK1J8pMyw/viewform?usp=sf_link"
-                style={{ textDecoration: "none", color: "#00f0df" }}
+                  height: "40px",
+                  borderRadius: "50px",
+                }}
               >
-                INSCRIPCION SUMMER TRADE
-              </a>
-            </button>
+                <a
+                  target="blank"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScb1MfgLI9Hcb_keEwvnNT8HMEQOY7YLhsDxqqTcsK1J8pMyw/viewform?usp=sf_link"
+                  style={{ textDecoration: "none", color: "#00f0df" }}
+                >
+                  SUMMER TRADE
+                </a>
+              </button>
 
-            <Buttons title="Cuenta" destination="cuentas" />
+              <Buttons title="Cuenta" destination="cuentas" />
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
