@@ -1,11 +1,17 @@
+import { lazy, Suspense } from "react";
 import { createHashRouter } from "react-router-dom";
 import LayoutPublic from "../Layout/LayoutPublic";
 import LayoutUserHome from "../Layout/LayoutUserHome";
 import Home from "../Pages/Home/Home";
-import UserHome from "../Pages/UserHome/UserHome";
-import LoginRegistration from "../Pages/LoginRegistration/LoginRegistration";
 import ProtectedRoutes from "./../Components/Protected Routes/ProtectedRoute";
-import Admin from "../Components/Admin/Admin";
+// import Admin from "../Components/Admin/Admin";
+import Spinners from "../Components/Commons/Spinner/Spinners";
+
+const LoginRegistration = lazy(() =>
+  import("../Pages/LoginRegistration/LoginRegistration")
+);
+const UserHome = lazy(() => import("../Pages/UserHome/UserHome"));
+const Admin = lazy(() => import("../Components/Admin/Admin"));
 export const router = createHashRouter([
   {
     path: "/",
@@ -19,7 +25,11 @@ export const router = createHashRouter([
   },
   {
     path: "/cuentas",
-    element: <LoginRegistration />,
+    element: (
+      <Suspense fallback={<Spinners />}>
+        <LoginRegistration />,
+      </Suspense>
+    ),
   },
   {
     path: "/userHome",
@@ -31,12 +41,20 @@ export const router = createHashRouter([
     children: [
       {
         index: true,
-        element: <UserHome />,
+        element: (
+          <Suspense fallback={<Spinners />}>
+            <UserHome />,
+          </Suspense>
+        ),
       },
 
       {
         path: "admin",
-        element: <Admin />,
+        element: (
+          <Suspense fallback={<Spinners />}>
+            <Admin />,
+          </Suspense>
+        ),
       },
     ],
   },
