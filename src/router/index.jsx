@@ -4,8 +4,9 @@ import LayoutPublic from "../Layout/LayoutPublic";
 import LayoutUserHome from "../Layout/LayoutUserHome";
 import Home from "../Pages/Home/Home";
 import ProtectedRoutes from "./../Components/Protected Routes/ProtectedRoute";
-// import Admin from "../Components/Admin/Admin";
 import Spinners from "../Components/Commons/Spinner/Spinners";
+import MisCursos from "../Components/MisCursos/MisCursos";
+import Trader from "../Components/Trader/Trader";
 
 const LoginRegistration = lazy(() =>
   import("../Pages/LoginRegistration/LoginRegistration")
@@ -56,6 +57,16 @@ export const router = createHashRouter([
           </Suspense>
         ),
       },
+      {
+        path: "misCursos",
+        element: (
+          <Suspense fallback={<Spinners />}>
+            <MisCursos />
+          </Suspense>
+        ),
+        children: [{ path: "inversorBursatil" }, { path: "Combo" }],
+      },
+      { path: "trader", element: <Trader /> },
     ],
   },
 ]);
