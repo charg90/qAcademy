@@ -13,25 +13,31 @@ const MisCursos = () => {
       {loading ? (
         <Spinners />
       ) : (
-        <Row className="d-flex text-white align-items-center justify-content-around vw-100">
-          <Col sm={12} lg={4} className="text-center h-75">
-            <Link to="/userHome/trader">
-              <Button className={`${styles.btnMiscursos} `}>Trader</Button>
-            </Link>
-          </Col>
-          <Col sm={12} lg={4} className="text-center h-75">
-            <Link to="/userHome/inversorBursatil">
-              <Button className={`${styles.btnMiscursos}`}>
-                {" "}
-                Inversion Bursatil
-              </Button>
-            </Link>
-          </Col>
-          <Col sm={12} lg={4} className="text-center h-75">
-            <Link to="/userHome/combo">
-              <Button className={`${styles.btnMiscursos}`}> Combo</Button>
-            </Link>
-          </Col>
+        <Row className=" vw-100 d-flex align-items-center  ">
+          {userData.trader && (
+            <Col sm={12} md={4} className="text-center p-0 ">
+              <Link to="/userHome/trader">
+                <Button className={`${styles.btnMiscursos} `}>Trader</Button>
+              </Link>
+            </Col>
+          )}
+          {userData.inverBur && (
+            <Col sm={12} md={4} className="text-center p-0">
+              <Link to="/userHome/inversorBursatil">
+                <Button className={`${styles.btnMiscursos}`}>
+                  {" "}
+                  Inversion Bursatil
+                </Button>
+              </Link>
+            </Col>
+          )}
+          {userData.combo && (
+            <Col sm={12} md={4} className="text-center p-0 ">
+              <Link to="/userHome/combo">
+                <Button className={`${styles.btnMiscursos}`}> Combo</Button>
+              </Link>
+            </Col>
+          )}
         </Row>
       )}
     </>

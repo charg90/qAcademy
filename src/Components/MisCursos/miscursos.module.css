@@ -2,12 +2,14 @@
   background-color: transparent;
   border: #00f0df solid 3px;
   color: #00f0df;
+  min-height: 100px;
+  height: 300px;
   width: 100%;
-  height: 100%;
   border-radius: 50px;
-  font-size: 30px;
   font-weight: bold;
   transition-duration: 0.4s;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .btnMiscursos:hover {
