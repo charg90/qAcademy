@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { getUsers } from "../../FireBase/getUsers";
-import { Button, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import { useEffect } from "react";
 import Spinners from "../Commons/Spinner/Spinners";
 import styles from "./admin.module.css";
 import activateCoures from "../../FireBase/activatedCourse";
-import Spinner from "react-bootstrap/Spinner";
+
 import { ButtonUpdate } from "../Buttons/ButtonUpdate";
 
 const Admin = () => {
@@ -24,6 +24,7 @@ const Admin = () => {
   const handleGetUsers = async () => {
     try {
       const users = await getUsers();
+      console.log(users);
       setUser(users);
       setLoading(false);
     } catch (err) {
