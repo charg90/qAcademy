@@ -10,6 +10,7 @@ const Spinners = () => {
       firstLineColor="cyan"
       middleLineColor="red"
       lastLineColor="cyan"
+      className="align-items-center"
     />
   );
 };
