@@ -1,0 +1,20 @@
+.adminInput {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #00f0df;
+  color: #00f0df;
+}
+
+.btnAdmin {
+  background-color: transparent;
+  border: 1px solid #00f0df;
+  color: #00f0df;
+  width: 100px;
+  border-radius: 66px;
+  transition-duration: 0.4s;
+}
+.btnAdmin:hover {
+  background-color: #00f0df;
+  color: #000c24;
+}

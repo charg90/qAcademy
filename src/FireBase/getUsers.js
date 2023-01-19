@@ -1,16 +1,19 @@
-import { collection, getDocs } from "@firebase/firestore";
+import {
+  collection,
+  getDocs,
+  orderBy,
+  limit,
+  query,
+} from "@firebase/firestore";
 import { db } from "./config";
 export const getUsers = async () => {
-  let allUsers = [];
-  try {
-    const usuariosRef = collection(db, "usuarios");
-    const snapshot = await getDocs(usuariosRef);
+  let users = [];
+  const usuariosRef = collection(db, "usuarios");
+  const que = query(collection(db, "usuarios"), limit(10));
+  const snapshot = await getDocs(que);
+  snapshot.forEach((snap) => {
+    users.push(snap.data());
+  });
 
-    snapshot.forEach((doc) => {
-      allUsers.push(doc.data());
-    });
-    return allUsers;
-  } catch (err) {
-    console.log(err);
-  }
+  return users;
 };

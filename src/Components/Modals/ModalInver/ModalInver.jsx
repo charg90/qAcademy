@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import styles from "./modalInver.module.css";
+import Temario from "../../../assets/TEMARIO INVERSOR BURSATIL ANUAL[2478].pdf";
 export const ModalInver = () => {
   const [show, setShow] = useState(false);
 
@@ -41,6 +42,11 @@ export const ModalInver = () => {
           momento correcto de invertir.
         </Modal.Body>
         <Modal.Footer className={`${styles.modalFooter}`}>
+          <button className={`${styles.btnModal}`}>
+            <a href={Temario} download>
+              Temario
+            </a>
+          </button>
           <button className={`${styles.btnModal}`} onClick={handleClose}>
             Cerrar
           </button>

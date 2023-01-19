@@ -11,7 +11,7 @@ const LayoutUserHome = () => {
       className={`bg-dark d-flex flex-column min-vh-100 mt-0 p-0 align-items-center justify-content-center`}
     >
       <NavUser />
-      <main className="mt-4">
+      <main className=" d-flex  " style={{ flex: 1 }}>
         <Outlet />
       </main>
       <Footer />

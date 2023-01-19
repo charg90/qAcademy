@@ -37,14 +37,13 @@ const NavUser = () => {
               >
                 Cursos
               </NavLink>
-              <NavLink
+              <Link
                 className={`${styles.links}`}
-                hrfe="#"
-                to="contacto"
+                to="misCursos"
                 style={{ textDecoration: "none" }}
               >
                 Mis Cursos
-              </NavLink>
+              </Link>
               {uid == import.meta.env.VITE_ADMIN ||
               uid == import.meta.env.VITE_ADMIN2 ? (
                 <Link to="admin" className={`${styles.links}`}>
