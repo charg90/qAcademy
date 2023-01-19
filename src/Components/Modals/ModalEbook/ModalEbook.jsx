@@ -52,7 +52,7 @@ const ModalEbook = () => {
                   download
                   className="d-flex flex-column justify-content-center text-decoration-none"
                 >
-                  <p className={`${styles.EbookP}`}>Quiero mi Ebook </p>
+                  Quiero mi Ebook
                 </a>
               </Button>
             </Modal.Body>

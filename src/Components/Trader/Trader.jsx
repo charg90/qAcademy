@@ -14,7 +14,7 @@ const Trader = () => {
 
   return (
     <Container className="d-flex max-vh-100">
-      <Row>
+      <Row onContextMenu={(e) => e.preventDefault()}>
         {loading ? (
           <Spinners />
         ) : (
@@ -48,6 +48,7 @@ const Trader = () => {
               controls
               className={`${styles.videoReproducer}`}
               src={videos[index]}
+              controlsList="nodownload"
             />
           </>
         )}

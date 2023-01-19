@@ -20,6 +20,7 @@
   width: 130px;
   height: 40px;
   border-radius: 50px;
+  text-decoration: none;
 }
 .btnVerMas {
   background-color: transparent;
@@ -37,4 +38,11 @@
 
 .modalFooter {
   background-color: rgb(45, 4, 53) !important;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #00f0df;
 }
