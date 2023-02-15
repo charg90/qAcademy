@@ -59,25 +59,6 @@ const ModalEbook = () => {
           </Col>
         </Row>
         <Modal.Footer className={`${styles.modalFooter}`}>
-          <button
-            className={`${styles.links}`}
-            style={{
-              backgroundColor: "transparent",
-              border: "#00f0df solid 3px",
-              color: "#00f0df",
-
-              height: "40px",
-              borderRadius: "50px",
-            }}
-          >
-            <a
-              target="blank"
-              href="https://docs.google.com/forms/d/e/1FAIpQLScb1MfgLI9Hcb_keEwvnNT8HMEQOY7YLhsDxqqTcsK1J8pMyw/viewform?usp=sf_link"
-              style={{ textDecoration: "none", color: "#00f0df" }}
-            >
-              INSCRIPCION SUMMER TRADE
-            </a>
-          </button>
           <button className={`${styles.btnModal}`} onClick={handleClose}>
             Cerrar
           </button>
