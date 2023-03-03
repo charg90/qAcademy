@@ -76,6 +76,22 @@ const NavBar = () => {
                 </Link>
               </Nav.Link>
             </Nav>
+
+            <a href="https://discord.gg/MvKGvzdf2z" target="_blank">
+              <button
+                style={{
+                  backgroundColor: "transparent",
+                  border: "#00f0df solid 3px",
+                  color: "#00f0df",
+                  height: "40px",
+                  borderRadius: "50px",
+                }}
+              >
+                {" "}
+                Grupo Apertura de cursos anuales
+              </button>
+            </a>
+
             <div className={`${styles.buttonsContainer}`}>
               <Buttons title="Cuenta" destination="cuentas" />
             </div>
