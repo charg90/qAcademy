@@ -44,6 +44,21 @@ const ModalEbook = () => {
                 Descargarlo gratis y empecemos con los primeros pasos en este
                 emocionante mundo
               </p>
+              <a href="https://discord.gg/MvKGvzdf2z" target="_blank">
+                <button
+                  style={{
+                    backgroundColor: "transparent",
+                    border: "#00f0df solid 3px",
+                    color: "#00f0df",
+                    height: "40px",
+                    borderRadius: "50px",
+                    marginBottom: "2px",
+                  }}
+                >
+                  {" "}
+                  Grupo Apertura de cursos anuales
+                </button>
+              </a>
               <Button
                 className={`${styles.btnVerMas} d-flex justify-content-center `}
               >
