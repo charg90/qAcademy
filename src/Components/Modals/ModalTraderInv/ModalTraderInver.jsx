@@ -44,6 +44,9 @@ export const ModalTraderInver = () => {
           largo plazo.
         </Modal.Body>
         <Modal.Footer className={`${styles.modalFooter}`}>
+          <a href="https://hotmart.com/es/marketplace/productos/trading-e-inversiones-bursatiles/E79732743B">
+            <button className={`${styles.btnModal}`}>Inscribite</button>
+          </a>
           <button className={`${styles.btnModal}`}>
             <a href={Temario} download>
               Temario

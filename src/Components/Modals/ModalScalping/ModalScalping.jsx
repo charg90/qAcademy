@@ -44,11 +44,12 @@ export const ModalScalping = () => {
           vos.
         </Modal.Body>
         <Modal.Footer className={`${styles.modalFooter}`}>
-          <button className={`${styles.btnModal}`}>
-            <a href={Temario} download>
-              Temario
-            </a>
-          </button>
+          <a href="https://hotmart.com/es/marketplace/productos/trader-owuk7/E79733585I">
+            <button className={`${styles.btnModal}`}>Inscribite</button>
+          </a>
+          <a href={Temario} download>
+            <button className={`${styles.btnModal}`}>Temario</button>
+          </a>
           <button className={`${styles.btnModal}`} onClick={handleClose}>
             Cerrar
           </button>

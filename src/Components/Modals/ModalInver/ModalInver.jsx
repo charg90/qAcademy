@@ -42,6 +42,10 @@ export const ModalInver = () => {
           momento correcto de invertir.
         </Modal.Body>
         <Modal.Footer className={`${styles.modalFooter}`}>
+          <a href="https://hotmart.com/es/marketplace/productos/inversor-bursatil/P79733649U">
+            <button className={`${styles.btnModal}`}>Inscribite</button>
+          </a>
+
           <button className={`${styles.btnModal}`}>
             <a href={Temario} download>
               Temario
