@@ -5,7 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import styles from "./navBar.module.css";
 import Buttons from "../Buttons/Buttons";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link as RouterLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -74,6 +74,17 @@ const NavBar = () => {
                 >
                   <div>Contacto</div>
                 </Link>
+              </Nav.Link>
+              <Nav.Link className={`${styles.links}`} to="/broker">
+                <RouterLink
+                  to="/broker"
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div>Broker</div>
+                </RouterLink>
               </Nav.Link>
             </Nav>
 

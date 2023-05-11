@@ -7,6 +7,7 @@ import ProtectedRoutes from "./../Components/Protected Routes/ProtectedRoute";
 import Spinners from "../Components/Commons/Spinner/Spinners";
 import MisCursos from "../Components/MisCursos/MisCursos";
 import Trader from "../Components/Trader/Trader";
+import Broker from "../Pages/Broker/Broker";
 
 const LoginRegistration = lazy(() =>
   import("../Pages/LoginRegistration/LoginRegistration")
@@ -21,6 +22,14 @@ export const router = createHashRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "/broker",
+        element: (
+          <Suspense fallback={<Spinners />}>
+            <Broker />
+          </Suspense>
+        ),
       },
     ],
   },
